@@ -74,5 +74,6 @@ $route['dashboard'] = 'LoginController/dashboard';
 /******* Contact and Enquiry Routes *******/
 $route['backend/contacts'] 	= 'CommController/contact_index';
 $route['backend/enquiries'] = 'CommController/enquiry_index';
+$route['backend/view_enquiry/(:num)'] = 'CommController/view_enquiry/$1';
 /******* Contact and Enquiry Routes *******/
 $route['backend/profile'] 	= 'ProfileController/index';

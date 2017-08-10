@@ -72,6 +72,9 @@ nav.navbar{
 .product-box{text-align:center;/*padding: 10px 10px;*/}
 .product-box p{font-size:17px;margin:7px 0px !important;}
 .product-deatail-box p{font-size:16px;color:#333;text-align:justify;}
+.spare-details h2{color: #fff; margin-top: 0px;}
+.spare-carousel>.item>img {line-height:1;height:350px !important;width:100%;}
+.spare-details li{color:#fff;}
 /* Contact Page Styles*/
 .contact-details{background-color:#1e1e1e;padding: 80px 0px;color:#fff;}
 .contact-box{text-align:center;padding:25px 25px 25px 25px;}

@@ -127,6 +127,8 @@ class WelcomeController extends CI_Controller {
 	}
 
 	public function create_enquiry(){
+		/*echo 'a';die;
+		print_r($_POST);die;*/
 		$this->load->library('form_validation');
 		$this->form_validation->set_rules('name', 'Name', 'required');
 		$this->form_validation->set_rules('email', 'Email', 'required');
@@ -141,6 +143,10 @@ class WelcomeController extends CI_Controller {
 		{
 			$this->load->model('Contact_model');
 			$result = $this->Contact_model->add_enquiry();
+			if ($result) {
+				$this->session->set_flashdata('msg','Enquiry Sent. We will contact to you soon.');
+				redirect('spares-and-accessories');
+			}
 			/*if ($result) {
 				require_once(APPPATH.'PHPMailer/PHPMailerAutoload.php');
 				$mail = new PHPMailer();
@@ -183,11 +189,12 @@ class WelcomeController extends CI_Controller {
 	public function getProductDetails(){
 		$url = $this->uri->segment(3);
 		$this->db->where('url', $url);
-		$ObjProduct = $this->db->get('products_tbl')->result();
+		$data['ObjProduct'] = $this->db->get('products_tbl')->result();
 		$product_id = lookup_value('products_tbl', 'id',array('url'=>$url));
 		$this->db->where('product_id', $product_id);
-		$ArrProductImage = $this->db->get('productimages_tbl')->result_array();
-		echo('<pre/>');print_r($ArrProductImage);die;
+		$data['ArrProductImage'] = $this->db->get('productimages_tbl')->result_array();
+		// echo('<pre/>');print_r($ArrProductImage);die;
+		$this->load->view('spare_details', $data);
 
 	}
 }

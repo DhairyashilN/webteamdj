@@ -143,9 +143,15 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
+                                    <label for="inputEmail3" class="col-sm-2 control-label">Product Thumbnail  Image</label>
+                                    <div class="col-sm-7">
+                                        <input type="file" name="product_thumb_image" id="product_thumb_image" class="form-control" tabindex="4" required accept="Image/*">
+                                    </div>
+                                </div>
+                                <div class="form-group">
                                     <label for="inputEmail3" class="col-sm-2 control-label">Product Images</label>
                                     <div class="col-sm-7">
-                                        <input type="file" name="product_image[]" id="product_image" class="form-control" multiple tabindex="4" required>
+                                        <input type="file" name="product_image[]" id="product_image" class="form-control" tabindex="4" multiple required accept="Image/*">
                                     </div>
                                 </div>
                                 <div class="form-group">

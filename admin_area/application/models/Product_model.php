@@ -28,7 +28,7 @@ class Product_model extends CI_Model {
                                                 $idata['product_id'] = $this->input->post('p_id');
                                                 $idata['image'] = $target_dir.$file_name;
                                                 $this->db->where('product_id',$this->input->post('p_id'));
-                                                $this->db->update('productimages_tbl',$idata);
+                                                //$this->db->update('productimages_tbl',$idata);
                                         }else{
                                                 echo 'not image';
                                         }
@@ -38,7 +38,7 @@ class Product_model extends CI_Model {
                                 $pimages = $this->db->get('productimages_tbl')->result_array();
                                 foreach ($pimages as $value) {
                                         $image['image'] = $value['image'];
-                                        $this->db->update('productimages_tbl',$image);
+                                        //$this->db->update('productimages_tbl',$image);
                                 }
                         }if($this->db->trans_status() === FALSE){
                                 return $this->db->trans_rollback();
@@ -46,7 +46,18 @@ class Product_model extends CI_Model {
                                 return $this->db->trans_complete();
                         }
                 } else {
+                        if(isset($_FILES['product_thumb_image'])){
+                                $target_dir = '../assets/images/spares/';
+                                $extension  = array("jpeg","jpg","png","gif");
+                                $file_name  = date('His').$_FILES["product_thumb_image"]["name"];
+                                $file_tmp   = $_FILES["product_thumb_image"]["tmp_name"];
+                                $ext = pathinfo($file_name,PATHINFO_EXTENSION);
+                                if(in_array($ext,$extension)){
+                                        move_uploaded_file($_FILES["product_thumb_image"]["tmp_name"],$target_dir.$file_name);
+                                }else{ echo 'not image'; }
+                        }
                         $this->db->trans_start();
+                        $data['thubnail_image'] = $target_dir.$file_name;
                         $this->db->insert('products_tbl', $data);
                         $insert_id = $this->db->insert_id();
                         if(isset($_FILES['product_image'])){

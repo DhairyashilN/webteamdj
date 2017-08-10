@@ -29,41 +29,68 @@
                                 <tr>
                                     <th>Sr. No.</th>
                                     <th>Name</th>
-                                    <th>Email</th>
-                                    <th>Mobile No.</th>
-                                    <th>Message</th>
+                                    <th>Contact Details</th>
+                                    <th>Product</th>
+                                    <th>Is Order Given</th>
+                                    <th>Order Delivery Date</th>
+                                    <th>Order Quantity</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php
                                 $srno=1;
-                                if (isset($ArrContacts) && !empty($ArrContacts)):
-                                    foreach ($ArrContacts as $contact): ?>
-                                <tr>
-                                    <td><?php echo $srno++; ?></td>
-                                    <td><?php echo $contact['contact_name']; ?></td>
-                                    <td><?php echo $contact['contact_no']; ?></td>
-                                    <td><?php echo $contact['contact_email']; ?></td>
-                                    <td><?php echo $contact['contact_message']; ?></td>
-                                </tr>
-                            <?php endforeach; 
-                            endif; ?>
-                        </tbody>
-                        <tfoot>
-                            <tr>
-                                <th>Sr. No.</th>
-                                <th>Name</th>
-                                <th>Email</th>
-                                <th>Mobile No.</th>
-                                <th>Message</th>
-                            </tr>
-                        </tfoot>
-                    </table>
-                </div><!-- /.box-body -->
-            </div><!-- /.box -->
-        </div><!-- ./col -->
-    </div><!-- /.row -->
-</section><!-- /.content -->
-</aside><!-- /.right-side -->
-</div><!-- ./wrapper -->
-<?php $this->load->view('footer'); ?>
+                                if (isset($ArrEnquiries) && !empty($ArrEnquiries)){
+                                    foreach ($ArrEnquiries as $enquiry){
+                                        ?>
+                                        <tr>
+                                            <td><?php echo $srno++; ?></td>
+                                            <td><?php echo $enquiry['name']; ?></td>
+                                            <td>
+                                                <ul>
+                                                    <li><p>Contact: <?php echo $enquiry['contact_no']; ?></p></li>
+                                                    <li><p>Email: <?php echo $enquiry['email']; ?></p></li>
+                                                </ul>
+                                            </td>
+                                            <td>
+                                                <?php foreach ($ArrProduct as $pro){
+                                                    if ($pro['id'] == $enquiry['product_id']) {
+                                                        echo $pro['name'];
+                                                    }} ?>
+                                                </td>
+                                                <td>
+                                                    <?php if ($enquiry['is_order_placed'] == 0) { echo 'No';}?>
+                                                    <?php if ($enquiry['is_order_placed'] == 1) { echo 'Yes';}?>
+                                                </select>
+                                            </td>
+                                            <td><?php echo $enquiry['order_delivery_date']; ?></td>
+                                            <td><?php echo $enquiry['order_quantity']; ?></td>
+                                            <td>
+                                                <a href="<?php echo site_url('backend/view_enquiry/'.$enquiry['id']);?>">
+                                                    <button class="btn btn-primary btn-sm btn-flat" title="View Enquiry">View</button>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <?php }} ?>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th>Sr. No.</th>
+                                            <th>Name</th>
+                                            <th>Contact Details</th>
+                                            <th>Product</th>
+                                            <th>Is Order Given</th>
+                                            <th>Order Delivery Date</th>
+                                            <th>Order Quantity</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div><!-- /.box-body -->
+                        </div><!-- /.box -->
+                    </div><!-- ./col -->
+                </div><!-- /.row -->
+            </section><!-- /.content -->
+        </aside><!-- /.right-side -->
+    </div><!-- ./wrapper -->
+    <?php $this->load->view('footer'); ?>

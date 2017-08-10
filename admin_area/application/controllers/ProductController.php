@@ -69,7 +69,7 @@ class ProductController extends CI_Controller {
 		$page_data['ArrCategory'] =	$this->db->get('category_tbl')->result_array();
 		$this->db->where('id',$id);
 		$page_data['ObjProduct'] = $this->db->get('products_tbl')->result();
-		$this->db->where('id',$id);
+		$this->db->where('product_id',$id);
 		$page_data['ArrProductImage'] =	$this->db->get('productimages_tbl')->result_array();
 		$this->load->view('add_product',$page_data);
 	}

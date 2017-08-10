@@ -15,6 +15,8 @@
   <!-- Custom CSS -->
   <link href="<?php echo base_url();?>assets/css/custom_styles.css" rel="stylesheet">
   <link href="<?php echo base_url();?>assets/css/hover-min.css" rel="stylesheet">
+  <!-- XZOOM JQUERY PLUGIN  -->
+<script src="<?php echo base_url();?>assets/js/xzoom/dist/xzoom.css"></script>
 </head>
 <body>
   <div class="se-pre-con"></div>

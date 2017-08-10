@@ -60,9 +60,11 @@
 <!-- Bootstrap Core JavaScript -->
 <script src="<?php echo base_url();?>assets/js/bootstrap.min.js"></script>
 <script src="<?php echo base_url();?>assets/js/image_loader.js"></script>
+<!-- XZOOM JQUERY PLUGIN  -->
+<script src="<?php echo base_url();?>assets/js/xzoom/dist/xzoom.min.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
-
+		$(".xzoom").xzoom();
 	//Check to see if the window is top if not then display button
 	$(window).scroll(function(){
 		if ($(this).scrollTop() > 800) {
@@ -100,30 +102,6 @@
 					if (result['success'] == 1) {
 						$('#success').text('Thank you for contacting with us.');
 						$('#contactForm')[0].reset();
-					} else{
-						$('#success').text('');
-						$('#error').text('Error occured...');
-					}
-				}
-			});
-		}
-	});
-	$('.submit-enq').on('click',function(e) {
-		e.preventDefault();
-		if ($('#name,#phone,#email,#message').val() == '') {
-			$('#error').text('All fields are required');
-		} else {
-			$('#error').text('');
-			$('#success').text('Sending your enquiry.');
-			$.ajax({
-				type : 'POST',
-				url  : 'submit_enquiry',
-				data : $('#enqForm').serialize(),
-				success:function(data) {
-					var result = $.parseJSON(data);
-					if (result['success'] == 1) {
-						$('#success').text('Thank you for enquiry.');
-						$('#enqForm')[0].reset();
 					} else{
 						$('#success').text('');
 						$('#error').text('Error occured...');
