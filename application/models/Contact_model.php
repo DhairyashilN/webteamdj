@@ -9,6 +9,7 @@ class Contact_model extends CI_Model {
         }
 
         public function add_enquiry() {
+                print_r($_POST[]);die;
                 $data['name'] = $this->input->post('name');
                 $data['email'] = $this->input->post('email');
                 $data['contact_no'] = $this->input->post('phone');

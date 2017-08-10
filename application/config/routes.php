@@ -59,4 +59,5 @@ $route['contact'] = 'WelcomeController/contact';
 $route['submit_contact'] = 'WelcomeController/create_contact';
 $route['submit_enquiry'] = 'WelcomeController/create_enquiry';
 $route['spares-and-accessorie/spares/(:any)'] = 'WelcomeController/getProductbycat/$1';
+$route['spares-and-accessorie/spare/(:any)'] = 'WelcomeController/getProductDetails/$1';
 $route['translate_uri_dashes'] = FALSE;

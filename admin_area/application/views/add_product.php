@@ -36,13 +36,89 @@
                         } ?>
                         <?php if (isset($ObjProduct) && !empty($ObjProduct)): ?>
                             <?php foreach ($ObjProduct as $product): ?>
+                                <?php echo form_open_multipart('ProductController/store_product', array('id' => 'productForm', 'class' => 'form-horizontal','autocomplete' => 'off'));?>
+                                <div class="box-body">
+                                    <input type="hidden" name="p_id" value="<?php echo $product->id;?>">
+                                    <div class="form-group">
+                                        <label for="inputEmail3" class="col-sm-2 control-label">Product Name</label>
+                                        <div class="col-sm-7">
+                                        <input type="text" class="form-control" id="product_name" name="product_name" value="<?php echo $product->name;?>" tabindex="1" onkeyup="addslash();" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputEmail3" class="col-sm-2 control-label">Product URL</label>
+                                        <div class="col-sm-7">
+                                            <input type="text" class="form-control" id="product_url" name="product_url" value="<?php echo $product->url;  ?>" tabindex="2" readonly required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputEmail3" class="col-sm-2 control-label">Product Category</label>
+                                        <div class="col-sm-7">
+                                            <select class="form-control" name="product_category" id="product_category" tabindex="2" required>
+                                                <option value="">Select Type</option>
+                                                <?php if (isset($ArrCategory) && !empty($ArrCategory)): ?>
+                                                    <?php foreach ($ArrCategory as $cat): ?>
+                                                        <option value="<?php echo $cat['id'];?>" <?php if ($product->category == $cat['id']) {
+                                                            echo 'selected';} ?>>
+                                                            <?php echo $cat['category']; ?>
+                                                        </option>
+                                                    <?php endforeach ?>
+                                                <?php endif ?>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputEmail3" class="col-sm-2 control-label">Product Description</label>
+                                        <div class="col-sm-7">
+                                            <textarea class="form-control" id="product_desc" name="product_desc" rows="7" tabindex="3" required><?php echo $product->description;?></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputEmail3" class="col-sm-2 control-label">Product Images</label>
+                                        <div class="col-sm-7">
+                                            <?php foreach ($ArrProductImage as $pimage){ ?>
+                                            <img src="../../<?php echo $pimage['image'];?>" style="height:100px;width:100px">
+                                            <?php } ?><br><br>
+                                            <input type="file" name="product_image[]" id="product_image" class="form-control" multiple tabindex="4">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputEmail3" class="col-sm-2 control-label">Product Quantity</label>
+                                        <div class="col-sm-7">
+                                            <input type="number" class="form-control" id="product_quant" name="product_quant" value="<?php echo $product->quantity;?>" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputEmail3" class="col-sm-2 control-label">Is Visible</label>
+                                        <div class="col-sm-2">
+                                            <input type="radio" id="product_visible" name="product_visible" value="1" required <?php if($product->isvisible == '1'){ echo 'checked';}?>> &nbsp;&nbsp;Yes
+                                            <input type="radio" id="product_visible" name="product_visible" value="0" required <?php if($product->isvisible == '0'){ echo 'checked';}?>> &nbsp;&nbsp;No
+                                        </div>
+                                        <label for="inputEmail3" class="col-sm-2 control-label">Out Of Stock</label>
+                                        <div class="col-sm-2">
+                                            <input type="radio" id="product_ofs" name="product_ofs" value="1" <?php if($product->out_of_stock == '1'){ echo 'checked';}?>> &nbsp;&nbsp;Yes
+                                            <input type="radio" id="product_ofs" name="product_ofs" value="0" <?php if($product->out_of_stock == '0'){ echo 'checked';}?>> &nbsp;&nbsp;No
+                                        </div>
+                                    </div>
+                                </div><!-- /.box-body -->
+                                <div class="box-footer">
+                                    <button type="Submit" class="btn btn-primary btn-flat productForm-submit" tabindex="2">Update</button>
+                                </div>
+                                <?php form_close(); ?>
+                            <?php endforeach ?>
+                        <?php else: ?>
                             <?php echo form_open_multipart('ProductController/store_product', array('id' => 'productForm', 'class' => 'form-horizontal','autocomplete' => 'off'));?>
                             <div class="box-body">
-                                <input type="hidden" name="p_id" value="<?php echo $product->id;?>">
                                 <div class="form-group">
                                     <label for="inputEmail3" class="col-sm-2 control-label">Product Name</label>
                                     <div class="col-sm-7">
-                                        <input type="text" class="form-control" id="product_name" name="product_name" value="<?php echo $product->name;?>" tabindex="1" required>
+                                        <input type="text" class="form-control" id="product_name" name="product_name" tabindex="1" onkeyup="addslash();" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputEmail3" class="col-sm-2 control-label">Product URL</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" class="form-control" id="product_url" name="product_url" tabindex="2" readonly required>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -52,8 +128,7 @@
                                             <option value="">Select Type</option>
                                             <?php if (isset($ArrCategory) && !empty($ArrCategory)): ?>
                                                 <?php foreach ($ArrCategory as $cat): ?>
-                                                    <option value="<?php echo $cat['id'];?>" <?php if ($product->category == $cat['id']) {
-                                                                echo 'selected';} ?>>
+                                                    <option value="<?php echo $cat['id'];?>">
                                                         <?php echo $cat['category']; ?>
                                                     </option>
                                                 <?php endforeach ?>
@@ -64,109 +139,53 @@
                                 <div class="form-group">
                                     <label for="inputEmail3" class="col-sm-2 control-label">Product Description</label>
                                     <div class="col-sm-7">
-                                        <textarea class="form-control" id="product_desc" name="product_desc" rows="7" tabindex="3" required><?php echo $product->description;?></textarea>
+                                        <textarea class="form-control" id="product_desc" name="product_desc" rows="7" tabindex="3" required></textarea>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="inputEmail3" class="col-sm-2 control-label">Product Images</label>
                                     <div class="col-sm-7">
-                                        <?php foreach ($ArrProductImage as $pimage){ ?>
-                                            <img src="../../<?php echo $pimage['image'];?>" style="height:100px;width:100px">
-                                        <?php } ?><br><br>
-                                        <input type="file" name="product_image[]" id="product_image" class="form-control" multiple tabindex="4">
+                                        <input type="file" name="product_image[]" id="product_image" class="form-control" multiple tabindex="4" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="inputEmail3" class="col-sm-2 control-label">Product Quantity</label>
                                     <div class="col-sm-7">
-                                        <input type="number" class="form-control" id="product_quant" name="product_quant" value="<?php echo $product->quantity;?>" required>
+                                        <input type="number" class="form-control" id="product_quant" name="product_quant" value="1" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="inputEmail3" class="col-sm-2 control-label">Is Visible</label>
                                     <div class="col-sm-2">
-                                        <input type="radio" id="product_visible" name="product_visible" value="1" required <?php if($product->isvisible == '1'){ echo 'checked';}?>> &nbsp;&nbsp;Yes
-                                        <input type="radio" id="product_visible" name="product_visible" value="0" required <?php if($product->isvisible == '0'){ echo 'checked';}?>> &nbsp;&nbsp;No
+                                        <input type="radio" id="product_visible" name="product_visible" value="1" required> &nbsp;&nbsp;Yes
+                                        <input type="radio" id="product_visible" name="product_visible" value="0" required> &nbsp;&nbsp;No
                                     </div>
                                     <label for="inputEmail3" class="col-sm-2 control-label">Out Of Stock</label>
                                     <div class="col-sm-2">
-                                        <input type="radio" id="product_ofs" name="product_ofs" value="1" <?php if($product->out_of_stock == '1'){ echo 'checked';}?>> &nbsp;&nbsp;Yes
-                                        <input type="radio" id="product_ofs" name="product_ofs" value="0" <?php if($product->out_of_stock == '0'){ echo 'checked';}?>> &nbsp;&nbsp;No
+                                        <input type="radio" id="product_ofs" name="product_ofs" value="1" > &nbsp;&nbsp;Yes
+                                        <input type="radio" id="product_ofs" name="product_ofs" value="0" > &nbsp;&nbsp;No
                                     </div>
                                 </div>
                             </div><!-- /.box-body -->
                             <div class="box-footer">
-                            <button type="Submit" class="btn btn-primary btn-flat productForm-submit" tabindex="2">Update</button>
+                                <button cat="Add" class="btn btn-primary btn-flat productForm-submit" tabindex="2">Add</button>
                             </div>
                             <?php form_close(); ?>
-                            <?php endforeach ?>
-                        <?php else: ?>
-                        <?php echo form_open_multipart('ProductController/store_product', array('id' => 'productForm', 'class' => 'form-horizontal','autocomplete' => 'off'));?>
-                        <div class="box-body">
-                            <div class="form-group">
-                                <label for="inputEmail3" class="col-sm-2 control-label">Product Name</label>
-                                <div class="col-sm-7">
-                                    <input type="text" class="form-control" id="product_name" name="product_name" tabindex="1" required>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputEmail3" class="col-sm-2 control-label">Product Category</label>
-                                <div class="col-sm-7">
-                                    <select class="form-control" name="product_category" id="product_category" tabindex="2" required>
-                                        <option value="">Select Type</option>
-                                        <?php if (isset($ArrCategory) && !empty($ArrCategory)): ?>
-                                            <?php foreach ($ArrCategory as $cat): ?>
-                                                <option value="<?php echo $cat['id'];?>">
-                                                    <?php echo $cat['category']; ?>
-                                                </option>
-                                            <?php endforeach ?>
-                                        <?php endif ?>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputEmail3" class="col-sm-2 control-label">Product Description</label>
-                                <div class="col-sm-7">
-                                    <textarea class="form-control" id="product_desc" name="product_desc" rows="7" tabindex="3" required></textarea>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputEmail3" class="col-sm-2 control-label">Product Images</label>
-                                <div class="col-sm-7">
-                                    <input type="file" name="product_image[]" id="product_image" class="form-control" multiple tabindex="4" required>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputEmail3" class="col-sm-2 control-label">Product Quantity</label>
-                                <div class="col-sm-7">
-                                    <input type="number" class="form-control" id="product_quant" name="product_quant" value="1" required>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputEmail3" class="col-sm-2 control-label">Is Visible</label>
-                                <div class="col-sm-2">
-                                    <input type="radio" id="product_visible" name="product_visible" value="1" required> &nbsp;&nbsp;Yes
-                                    <input type="radio" id="product_visible" name="product_visible" value="0" required> &nbsp;&nbsp;No
-                                </div>
-                                <label for="inputEmail3" class="col-sm-2 control-label">Out Of Stock</label>
-                                <div class="col-sm-2">
-                                    <input type="radio" id="product_ofs" name="product_ofs" value="1" > &nbsp;&nbsp;Yes
-                                    <input type="radio" id="product_ofs" name="product_ofs" value="0" > &nbsp;&nbsp;No
-                                </div>
-                            </div>
-                        </div><!-- /.box-body -->
-                        <div class="box-footer">
-                            <button cat="Add" class="btn btn-primary btn-flat productForm-submit" tabindex="2">Add</button>
-                        </div>
-                        <?php form_close(); ?>
-                    <?php endif; ?>
-                    <span id="error"></span>
-                    <span id="success"></span>
-                </div><!-- /.box-body -->
-            </div><!-- /.box -->
-        </div><!-- ./col -->
-    </div><!-- /.row -->
-</section><!-- /.content -->
+                        <?php endif; ?>
+                        <span id="error"></span>
+                        <span id="success"></span>
+                    </div><!-- /.box-body -->
+                </div><!-- /.box -->
+            </div><!-- ./col -->
+        </div><!-- /.row -->
+    </section><!-- /.content -->
 </aside><!-- /.right-side -->
 </div><!-- ./wrapper -->
+<script type="text/javascript">
+    function addslash() {
+        var str = document.getElementById('product_name').value;
+        result = str.replace(/\s+/g, '-').toLowerCase()
+        document.getElementById('product_url').value = result;
+    }
+</script>
 <?php $this->load->view('footer'); ?>

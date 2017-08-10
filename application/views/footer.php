@@ -114,7 +114,7 @@
 			$('#error').text('All fields are required');
 		} else {
 			$('#error').text('');
-			$('#success').text('Sending your message.');
+			$('#success').text('Sending your enquiry.');
 			$.ajax({
 				type : 'POST',
 				url  : 'submit_enquiry',

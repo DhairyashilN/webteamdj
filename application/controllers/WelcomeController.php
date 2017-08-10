@@ -126,7 +126,7 @@ class WelcomeController extends CI_Controller {
 		}
 	}
 
-	public function create_contact() {
+	public function create_enquiry(){
 		$this->load->library('form_validation');
 		$this->form_validation->set_rules('name', 'Name', 'required');
 		$this->form_validation->set_rules('email', 'Email', 'required');
@@ -178,5 +178,16 @@ class WelcomeController extends CI_Controller {
 		        }
 		    }*/
 		}
+	}
+
+	public function getProductDetails(){
+		$url = $this->uri->segment(3);
+		$this->db->where('url', $url);
+		$ObjProduct = $this->db->get('products_tbl')->result();
+		$product_id = lookup_value('products_tbl', 'id',array('url'=>$url));
+		$this->db->where('product_id', $product_id);
+		$ArrProductImage = $this->db->get('productimages_tbl')->result_array();
+		echo('<pre/>');print_r($ArrProductImage);die;
+
 	}
 }

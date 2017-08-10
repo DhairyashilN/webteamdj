@@ -2,6 +2,7 @@
 class Product_model extends CI_Model {
         public function store_product() {
                 $data['name']           = $this->input->post('product_name');
+                $data['url']            = $this->input->post('product_url');
                 $data['category']       = $this->input->post('product_category');
                 $data['description']    = $this->input->post('product_desc');
                 $data['quantity']       = $this->input->post('product_quant');
