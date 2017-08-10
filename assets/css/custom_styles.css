@@ -1,0 +1,132 @@
+/*Include Files*/
+@import url('../fonts/font-awesome/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css?family=Exo+2');
+@font-face{font-family:Exo_2;src:url(../fonts/Exo_2/Exo2-Regular.ttf);}
+/*Global Styles*/
+html,body{height:100%;font-family:'Exo_2';}
+body {padding-top:150px;/* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */}
+/* Paste this css to your style sheet file or under head tag */
+/* This only works with JavaScript, 
+if it's not present, don't show loader */
+.no-js #loader{display:none;}
+.js #loader{display:block;position:absolute;left:100px;top:0;}
+.se-pre-con{position:fixed;left:0px;top:0px;width:100%;height:100%;z-index:9999;background:url(../images/loader.gif) center no-repeat #fff;}
+/*Shrink Navbar Styles */
+/*nav.navbar.shrink {
+  height: 35px;
+}
+nav.navbar{
+  background-color:#0a0b0c;
+   // Animation
+   -webkit-transition: all 0.4s ease;
+   transition: all 0.4s ease;
+}*/
+/* Page Wrapper Styles */
+#wrapper{min-height:100%;height:auto !important;height:100%;margin:0 auto 0px auto;background-color:#1e1e1e;}
+/* Navbar Styles */
+.navbar-black {background-color:#0a0b0c;height: 150px;border-bottom:3px solid #d9b46e;}
+.navbar-black-right{padding: 50px 0px;margin-right:0px;}
+.navbar-black-right>li>a{text-decoration:none;color:#fff !important;font-size:16px;margin-left:30px;text-transform:uppercase;letter-spacing:2px;}
+.navbar-black-right>li>a:hover{text-decoration:none;background-color:#d9b46e !important;color:#fff !important;}
+.navbar-black-right>li>a.active{background-color:#d9b46e;}
+/*Home Slider styles*/
+.home-slider{min-height:550px;}
+.carousel-fade .carousel-inner .item{opacity:0.7;-webkit-transition-property:opacity 0.5s ease-in-out;-moz-transition-property:opacity 0.5s ease-in-out;-o-transition-property:opacity 0.5s ease-in-out;transition-property:opacity;}
+.carousel-fade .carousel-inner .active{opacity:1;}
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right{left:0;opacity:0;z-index:1;}
+.carousel-fade .carousel-inner .next.left,.carousel-fade .carousel-inner .prev.right {opacity:1;}
+.carousel-fade .carousel-control {z-index:2;}
+.carousel-control.left, .carousel-control.right{background-image:none !important;}
+.carousel-inner>.item>img {line-height:1;height:550px;width:100%;}
+/*Home Page Styles*/
+.home-intro{min-height:150px;background:#1e1e1e;padding:30px 0px;color:#fff;}
+.home-intro p{font-size:20px;margin:20px 0px;text-align:center;}
+.home-intro h1,.home-services h1,.home-testimonials h1{text-align:center;text-transform:uppercase;}
+.home-summary{min-height:250px;background:url('../images/bike-engine-mmi.jpg');background-attachment:fixed;background-position:0px 100px;padding:50px 0px;color:#fff;position:relative;}
+.home-services{min-height:450px;background:#1e1e1e;padding:70px 0px;color:#fff;}
+.home-services p{font-size:16px;margin:20px 0px;text-align:center;}
+.service-desc{border:1px solid #fff;text-align:center;padding:25px 25px 25px 25px;}
+.service-desc h3{margin-bottom:25px;}
+.service-desc-details{border:1px solid #d9b46e;text-align:center;padding:25px 25px 25px 25px;color:#fff;background-color:#d9b46e;}
+.home-testimonials{min-height:450px;background-color:#1e1e1e;padding:50px 0px;color:#fff;}
+.home-testimonials p{font-size: 16px;}
+.layer {background-color:rgba(14, 14, 14, 0.7);position:absolute;top:0;left:0;width:100%;height:100%;}
+/* About Page Styles */
+.team-image,.about-team,.about-awards,.about-awards-images{margin:15px 0px;}
+.about-team p{color:#fff;}
+.about-awards h2,.about-team-members h2{text-align:center;color:#fff;}
+.about-awards-images p{text-align:center;font-size:18px;}
+.about-team-members p{text-align:center;font-size:16px;margin:10px 0px !important;}
+.about-team-members{padding-bottom:30px;}
+/*Services Page Styles*/
+.services-details{padding:50px 0px;}
+.services-details h2{text-align:center;color:#fff;}
+.service-cta{padding:30px;background-color:#00923f;text-align:center;}
+.service-cta p{font-size: 35px;}
+/* Accessories Page Styles */
+.spares{padding:50px 0px;}
+.spares-category{border-radius:0px;border-color:#fff;background:transparent;}
+.spares-category .panel-heading{background-color:#fff;border-color:#fff;}
+.spares-category ul{padding-left: 0px;}
+.product-box{text-align:center;/*padding: 10px 10px;*/}
+.product-box p{font-size:17px;margin:7px 0px !important;}
+.product-deatail-box p{font-size:16px;color:#333;text-align:justify;}
+/* Contact Page Styles*/
+.contact-details{background-color:#1e1e1e;padding: 80px 0px;color:#fff;}
+.contact-box{text-align:center;padding:25px 25px 25px 25px;}
+/* Footer Styles */
+footer{padding:30px 0px;background-color:#0a0b0c;}
+.footer-headings{color:#d9b46e;/*border-bottom: 1px solid;*/padding:5px 0px;}
+.footer-lists {list-style-type:none;padding-left:1px;}
+.footer-lists>li>a{color:#fff;font-size:16px !important;}
+address>p{color:#fff;}
+.footer-bottom{background-color:#da251d;padding:17px 0px 3px 0px;color:#fff;font-size:15px;}
+/*Social Icons Styles*/
+.social-icons{color:#fff !important;font-size:1.3em !important;}
+.social-icons>.fa-lg{color:#da251d};
+/* Miscellenious CSS Styles */
+.font-bold{font-weight:bold !important;}
+.btn-red {background-color:#da251d;border-color:#da251d;color:#fff;border-radius:0px;}
+.btn-green {background-color: #00923f;border-color:#00923f;color:#fff;border-radius:0px;}
+.btn-red:hover,.btn-green:hover {color:#fff;}
+a {transition:all 300ms ease-out;color:#fff;}
+a:hover{color:#fff;text-decoration:underline;}
+p{color:#fff;font-size:16px;}
+.form-control{border-radius:0px !important;}
+#error{color:#da251d;font-size:16px;}
+#success{color:#00923f;font-size:16px;}
+/* Breadcrumb Styles */
+.custom-breadcrumb>li{display: inline;}
+.breadcrumb{padding:8px 15px;list-style:none;background-color:#00923f;border-radius:0px;float:right;margin-top:10px;margin-bottom:0px !important;}
+.page-breadcrumb{padding:20px 0px;background:#da251d;margin-bottom:0px;}
+.page-breadcrumb h3{color:#fff;}
+.upper-case{text-transform:uppercase;text-align:center;color:#3e3d3d;}
+.breadcrumb>.active{color: #fff;}
+/* hr styles*/
+hr.star-light{border-color:#fff;}
+hr.star-light,hr.star-primary{padding:2px;border:none;border-top:solid 2px #d9b46e;border-bottom:solid 2px #d9b46e;text-align:center;max-width:250px;margin:30px auto 25px;}
+hr.star-light:after{background-color:#1e1e1e;color:#d9b46e;}
+hr.star-light.head:after {background-color:#f1f1f1;color:#000;}
+hr.star-light:after,hr.star-primary:after{content: "\f005";font-family:FontAwesome;display:inline-block;position:relative;top:-.8em;font-size:25px;padding:0.25em;}
+.scrollToTop{width:50px;height:50px;padding:15px;text-align:center;background:#da251d;font-weight:bold;color:#444;text-decoration:none;position:fixed;bottom:100px;right:30px;display:none;}
+.scrollToTop:hover{	text-decoration:none;}
+/* Responsive Styles */
+@media(max-width:360px) {
+	body{padding-top:115px;}
+	.navbar-black{height:115px;}
+	.navbar-brand img{height:85px;}
+	.navbar-inverse .navbar-toggle{border-color:transparent;}
+	.navbar-inverse .navbar-toggle .icon-bar{background-color:#d9b46e;width:25px;height:3px;}
+	.home-slider{min-height:230px;}
+	.carousel-inner>.item>img{height:230px;width:100%;}
+	.service-desc{margin-bottom:15px;}
+}
+@media(max-width:768px) {
+	.navbar-black-right>li>a{font-size:12px;margin-left:5px;text-transform:uppercase;letter-spacing:1px;}
+	.service-desc h3{font-size:16px;}
+}
+@media(max-width:1024px) {
+	.navbar-black-right>li>a{font-size:16px;margin-left:10px;letter-spacing:2px;}
+	.service-desc h3{font-size:23px;}
+}
