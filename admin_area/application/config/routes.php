@@ -75,5 +75,12 @@ $route['dashboard'] = 'LoginController/dashboard';
 $route['backend/contacts'] 	= 'CommController/contact_index';
 $route['backend/enquiries'] = 'CommController/enquiry_index';
 $route['backend/view_enquiry/(:num)'] = 'CommController/view_enquiry/$1';
-/******* Contact and Enquiry Routes *******/
+/******* Profile Routes *******/
 $route['backend/profile'] 	= 'ProfileController/index';
+/******* Event Routes *******/
+$route['backend/events'] = 'EventController/index';
+$route['backend/add_event'] = 'EventController/create';
+$route['backend/delete_event/(:num)'] = 'EventController/delete/$1';
+$route['backend/edit_event/(:num)'] = 'EventController/edit/$1';
+/******* Statistics & Analytics Routes *******/
+$route['backend/statistics'] = 'StatisticsController/index';

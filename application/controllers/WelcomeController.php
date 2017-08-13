@@ -18,22 +18,31 @@ class WelcomeController extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function index() {
+	public function index(){
 		$data = array('title' => 'Home');
 		$this->load->view('home', $data);
 	}
 
-	public function about() {
+	public function about(){
 		$data = array('title' => 'About');
 		$this->load->view('about', $data);
 	}
 
-	public function services() {
+	public function services(){
 		$data = array('title' => 'Services');
 		$this->load->view('services', $data);
 	}
 
-	public function spares() {
+	public function events(){
+		$this->db->select('title,url,poster_image');
+		$this->db->from('events_tbl');
+		$this->db->where('isdelete',0);
+		$ArrEvents = $this->db->get()->result_array();
+		$data = array('title'=>'Events','ArrEvents'=>$ArrEvents);
+		$this->load->view('event', $data);
+	}
+
+	public function spares(){
 		$this->db->where('category_type','1');
 		$this->db->where('isdelete','0');
 		$ArrCat = $this->db->get('category_tbl')->result_array();
@@ -45,8 +54,7 @@ class WelcomeController extends CI_Controller {
 		$this->load->view('spares', $data);
 	}
 
-	public function getProductbycat($id='')
-	{
+	public function getProductbycat($id=''){
 		$ArrProductImage = array();
 		$this->db->where('category_type','1');
 		$this->db->where('isdelete','0');
@@ -67,12 +75,12 @@ class WelcomeController extends CI_Controller {
 		$this->load->view('spares', $data);
 	}
 
-	public function contact() {
+	public function contact(){
 		$data = array('title' => 'Contact');
 		$this->load->view('contact', $data);
 	}
 
-	public function create_contact() {
+	public function create_contact(){
 		$this->load->library('form_validation');
 		$this->form_validation->set_rules('name', 'Name', 'required');
 		$this->form_validation->set_rules('email', 'Email', 'required');
@@ -193,8 +201,29 @@ class WelcomeController extends CI_Controller {
 		$product_id = lookup_value('products_tbl', 'id',array('url'=>$url));
 		$this->db->where('product_id', $product_id);
 		$data['ArrProductImage'] = $this->db->get('productimages_tbl')->result_array();
-		// echo('<pre/>');print_r($ArrProductImage);die;
+		$this->db->select('view_count');
+		$this->db->from('products_tbl');
+		$this->db->where('id', $product_id);
+		$view_count = $this->db->get()->result();
+		foreach ($view_count as $value) {
+			$view_count = $value->view_count;
+		}
+		$new_count=$view_count+1;
+		$this->db->where('id', $product_id);
+		$this->db->update('products_tbl',['view_count'=>$new_count]);
 		$this->load->view('spare_details', $data);
-
 	}
+
+	public function getEventDetails(){
+		$url = $this->uri->segment(2);
+		$this->db->where('url', $url);
+		$data['ObjEvent'] = $this->db->get('events_tbl')->result();
+		$product_id = lookup_value('events_tbl', 'id',array('url'=>$url));
+		$this->db->where('event_id', $product_id);
+		$data['ArrEventImage'] = $this->db->get('eventimages_tbl')->result_array();
+		// echo('<pre/>');print_r($ArrProductImage);die;
+		$this->load->view('event_details', $data);
+	}
+
+
 }

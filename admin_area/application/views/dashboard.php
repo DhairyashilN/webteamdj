@@ -25,10 +25,13 @@
                     <div class="small-box bg-aqua">
                         <div class="inner">
                             <h3>
-                                150
+                                <?php 
+                                $this->db->where('isdelete', 0);
+                                $this->db->from('products_tbl');
+                                echo $this->db->count_all_results(); ?>
                             </h3>
                             <p>
-                                Enquiries
+                                Spares
                             </p>
                         </div>
                         <div class="icon">
@@ -66,10 +69,13 @@
                     <div class="small-box bg-yellow">
                         <div class="inner">
                             <h3>
-                                44
+                                <?php 
+                                $this->db->where('isdelete', 0);
+                                $this->db->from('enquiries_tbl');
+                                echo $this->db->count_all_results(); ?>
                             </h3>
                             <p>
-                                Total Products
+                                Total Spare Enquiries
                             </p>
                         </div>
                         <div class="icon">
@@ -85,10 +91,13 @@
                     <div class="small-box bg-red">
                         <div class="inner">
                             <h3>
-                                65
+                                <?php 
+                                $this->db->where('isdelete', 0);
+                                $this->db->from('events_tbl');
+                                echo $this->db->count_all_results(); ?>
                             </h3>
                             <p>
-                                Total Contacts
+                                Events
                             </p>
                         </div>
                         <div class="icon">

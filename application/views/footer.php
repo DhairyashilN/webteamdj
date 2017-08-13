@@ -65,6 +65,13 @@
 <script type="text/javascript">
 	$(document).ready(function(){
 		$(".xzoom").xzoom();
+		$(".works-dropdown").mouseover(function () {
+			$(".works-menu").slideDown('slow');
+		});
+
+		$(".works-dropdown").mouseleave(function () {
+			$(".works-menu").slideUp('slow');
+		});
 	//Check to see if the window is top if not then display button
 	$(window).scroll(function(){
 		if ($(this).scrollTop() > 800) {

@@ -51,13 +51,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $route['default_controller'] = 'WelcomeController';
 $route['404_override'] = 'pageNotFoundController';
+$route['page-not-found'] = 'pageNotFoundController';
 $route['home'] = 'WelcomeController/index';
 $route['about'] = 'WelcomeController/about';
 $route['services'] = 'WelcomeController/services';
+$route['events'] = 'WelcomeController/events';
 $route['spares-and-accessories'] = 'WelcomeController/spares';
 $route['contact'] = 'WelcomeController/contact';
 $route['submit_contact'] = 'WelcomeController/create_contact';
 $route['submit_enquiry'] = 'WelcomeController/create_enquiry';
 $route['spares-and-accessories/spares/(:any)'] = 'WelcomeController/getProductbycat/$1';
 $route['spares-and-accessories/spare/(:any)'] = 'WelcomeController/getProductDetails/$1';
+$route['events/(:any)'] = 'WelcomeController/getEventDetails/$1';
 $route['translate_uri_dashes'] = FALSE;
