@@ -1,7 +1,7 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); 
-  if ($this->session->userdata('alogin')==1) {
-    redirect('dashboard','refresh');
-  }
+if ($this->session->userdata('alogin')==1) {
+  redirect('dashboard','refresh');
+}
 ?>
 <!DOCTYPE html>
 <html lang="en" class="bg-black">
@@ -27,21 +27,27 @@
     </div>
     <div class="header">Admin Login</div>
     <?php echo form_open('backend/login', array('method'=>'post')); ?>
-      <div class="body bg-gray">
-        <div class="form-group">
-          <input type="text" name="username" class="form-control" placeholder="Username"/>
+    <div class="body bg-gray">
+      <?php if ($this->session->flashdata('loginfail')): ?>
+        <div class="alert alert-danger alert-dismissable">
+          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+          <strong><?php echo $this->session->flashdata('loginfail');?></strong>
         </div>
-        <div class="form-group">
-          <input type="password" name="password" class="form-control" placeholder="Password"/>
-        </div>          
+      <?php endif ?>
+      <div class="form-group">
+      <input type="text" name="username" class="form-control" placeholder="Username" required="" />
       </div>
-      <div class="footer">                                                               
-        <button type="submit" class="btn bg-green btn-block">Sign me in</button>  
-        <p><a href="#">I forgot my password</a></p>
-      </div>
-      <div class="margin text-center">
-        <span><?php echo(date('Y')); ?></span>
-      </div>
+      <div class="form-group">
+        <input type="password" name="password" class="form-control" placeholder="Password" required="" />
+      </div>          
+    </div>
+    <div class="footer">                                                               
+      <button type="submit" class="btn bg-green btn-block">Sign me in</button>  
+      <p><a href="#">I forgot my password</a></p>
+    </div>
+    <div class="margin text-center">
+      <span><?php echo(date('Y')); ?></span>
+    </div>
     <?php echo form_close(); ?>
   </div>
   <!-- jQuery 2.0.2 -->

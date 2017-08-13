@@ -39,12 +39,12 @@ class LoginController extends CI_Controller {
 					$this->session->set_userdata('name', $row->username);
 					redirect('dashboard');
 				} else {
-					$this->session->set_flashdata('loginfail','Incorrect username & Password');
+					$this->session->set_flashdata('loginfail','Incorrect Username & Password');
 					redirect(base_url());
 				}
 			}
 			else{
-				$this->session->set_flashdata('loginfail','Incorrect username & Password');
+				$this->session->set_flashdata('loginfail','Incorrect Username & Password');
 				redirect(base_url());	
 			}
 		}

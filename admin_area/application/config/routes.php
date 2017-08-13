@@ -55,6 +55,8 @@ $route['translate_uri_dashes'] = FALSE;
 /******* Login Routes *******/
 $route['backend/login'] = 'LoginController/doLogin';
 $route['logout'] = 'LoginController/logout';
+/******* Dashboard Routes *******/
+$route['dashboard'] = 'LoginController/dashboard';
 /******* Category Routes *******/
 $route['backend/category_type'] = 'CategoryController/index';
 $route['backend/add_category_type'] = 'CategoryController/create';
@@ -69,18 +71,21 @@ $route['backend/add_product'] = 'ProductController/create';
 $route['backend/store_product'] = 'ProductController/store';
 $route['backend/delete_product/(:num)'] = 'ProductController/delete/$1';
 $route['backend/edit_product/(:num)'] = 'ProductController/edit/$1';
-/******* Dashboard Routes *******/
-$route['dashboard'] = 'LoginController/dashboard';
 /******* Contact and Enquiry Routes *******/
 $route['backend/contacts'] 	= 'CommController/contact_index';
 $route['backend/enquiries'] = 'CommController/enquiry_index';
 $route['backend/view_enquiry/(:num)'] = 'CommController/view_enquiry/$1';
 /******* Profile Routes *******/
-$route['backend/profile'] 	= 'ProfileController/index';
+$route['backend/profile'] = 'ProfileController/index';
 /******* Event Routes *******/
 $route['backend/events'] = 'EventController/index';
 $route['backend/add_event'] = 'EventController/create';
 $route['backend/delete_event/(:num)'] = 'EventController/delete/$1';
 $route['backend/edit_event/(:num)'] = 'EventController/edit/$1';
+/******* Event Routes *******/
+$route['backend/portfolio'] = 'PortfolioController/index';
+$route['backend/add_portfolio'] = 'PortfolioController/create';
+$route['backend/edit_portfolio/(:num)'] = 'PortfolioController/edit/$1';
+$route['backend/delete_portfolio/(:num)'] = 'PortfolioController/delete/$1';
 /******* Statistics & Analytics Routes *******/
 $route['backend/statistics'] = 'StatisticsController/index';

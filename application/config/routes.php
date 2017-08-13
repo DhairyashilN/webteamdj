@@ -63,4 +63,6 @@ $route['submit_enquiry'] = 'WelcomeController/create_enquiry';
 $route['spares-and-accessories/spares/(:any)'] = 'WelcomeController/getProductbycat/$1';
 $route['spares-and-accessories/spare/(:any)'] = 'WelcomeController/getProductDetails/$1';
 $route['events/(:any)'] = 'WelcomeController/getEventDetails/$1';
+$route['work/(:any)'] = 'WelcomeController/getPortfolios/$1';
+$route['work/(:any)/(:any)'] = 'WelcomeController/getPortfolioDetails/$1';
 $route['translate_uri_dashes'] = FALSE;

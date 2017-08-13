@@ -225,5 +225,25 @@ class WelcomeController extends CI_Controller {
 		$this->load->view('event_details', $data);
 	}
 
+	public function getPortfolios(){
+		$url = $this->uri->segment(2);
+		$cat_id = lookup_value('category_tbl', 'id',array('url'=>$url));
+		$this->db->where('pcategory',$cat_id);
+		$data['ArrPortfolio'] = $this->db->get('portfolio_tbl')->result_array();
+		$data['title'] = 'Work | '.$url;
+		$this->load->view('portfolio_grid', $data);
+	}
+
+	public function getPortfolioDetails(){
+		$url = $this->uri->segment(3);
+		$this->db->where('purl',$url);
+		$data['ObjPortfolio'] = $this->db->get('portfolio_tbl')->result();
+		$portfolio_id = lookup_value('portfolio_tbl','id',array('purl'=>$url));
+		$this->db->where('portfolio_id', $portfolio_id);
+		$data['ArrPortfolioImage'] = $this->db->get('portfolioimages_tbl')->result_array();
+		$data['title'] = 'Work | '.$url;
+		$this->load->view('portfolio_details', $data);
+	}
+
 
 }

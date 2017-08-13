@@ -71,7 +71,7 @@
                                 <div class="form-group">
                                     <label for="inputEmail3" class="col-sm-2 control-label">Event Description</label>
                                     <div class="col-sm-7">
-                                    <textarea class="form-control" id="product_desc" name="event_desc" rows="7" tabindex="3" required><?php echo $event->description;?></textarea>
+                                        <textarea class="form-control" id="product_desc" name="event_desc" rows="7" tabindex="3" required><?php echo $event->description;?></textarea>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -87,7 +87,7 @@
                                         <?php foreach ($ArrEventImage as $pimage){ ?>
                                         <div class="thumbnail">
                                             <img src="../../<?php echo $pimage['image'];?>" style="height:100px;width:100px">
-                                            <button type="button" class="btn btn-danger btn-xs btn-flat" onclick="confirm('Are you want to delete this image?',delete_img(<?php echo $pimage['id'];?>))">Delete</button>
+                                            <button type="button" class="btn btn-danger btn-xs btn-flat" onclick="if(confirm('Are you want to delete this image?'))delete_img(<?php echo $pimage['id'];?>)">Delete</button>
                                         </div>
                                         <?php } ?><br><br>
                                         <input type="file" name="event_image[]" id="event_image" class="form-control" tabindex="4" multiple  accept="Image/*">
@@ -168,52 +168,20 @@
         result = str.replace(/\s+/g, '-').toLowerCase()
         document.getElementById('event_url').value = result;
     }
-    $(document).ready(function(){
-        function delete_img(id){
-            if(id!=''){
-                $.ajax({
-                    type : 'POST',
-                    url  : '<?php echo site_url('EventController/remove_event_image'); ?>',
-                    data : {image:id,event:<?php echo isset($event_id)?$event_id:'a';?>,<?php echo $this->security->get_csrf_token_name(); ?>:'<?php echo $this->security->get_csrf_hash();?>'},
-                    success:function(data) {
-                        var result = $.parseJSON(data);
-                        if(result['success'] == 1){
-                            location.reload();
-                        }             
-                    }
-                });
-            }
+    function delete_img(id){
+        if(id!=''){
+            $.ajax({
+                type : 'POST',
+                url  : '<?php echo site_url('EventController/remove_event_image'); ?>',
+                data : {image:id,event:<?php echo isset($event_id)?$event_id:'a';?>,<?php echo $this->security->get_csrf_token_name(); ?>:'<?php echo $this->security->get_csrf_hash();?>'},
+                success:function(data) {
+                    var result = $.parseJSON(data);
+                    if(result['success'] == 1){
+                        location.reload();
+                    }             
+                }
+            });
         }
-    });
-
-    /*$(document).ready(function() {
-        $('.cattypeForm-submit').on('click',function(e) {
-            e.preventDefault();
-            if ($('#cat_type_name').val() == '') {
-                $('#error').text('All fields are required');
-                $('#success').text('');
-            } else {
-                $('#error').text('');
-                $('#success').text('Adding Category Type');
-                $.ajax({
-                    type : 'POST',
-                    url  : '<?php echo site_url('CategoryController/store_cat_type'); ?>',
-                    data : $('#cattypeForm').serialize(),
-                    success:function(data) {
-                        var result = $.parseJSON(data);
-                        if (result['success'] == 1) {
-                            $('#success').text('Category Type Added Successfully');
-                            $('#cattypeForm')[0].reset();
-                        } else if (result['update_success'] == 1) {
-                            $('#success').text('Category Type Updated Successfully');
-                        } else{
-                            $('#success').text('');
-                            $('#error').text('Error occured...');
-                        }
-                    }
-                });
-            }
-        });
-    });*/
+    }
 </script>
 <?php $this->load->view('footer'); ?>
