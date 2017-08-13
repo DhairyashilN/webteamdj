@@ -22,7 +22,7 @@
 	<!-- ======== Spares Section ========= -->
 	<section class="spares">
 		<div class="container">
-			<div class="row">
+			<div class="row detail-box">
 				<div class="col-lg-12">
 					<?php
 					if (isset($ObjPortfolio) && !empty($ObjPortfolio)) {
@@ -58,7 +58,7 @@
 					</div>
 					<hr>
 					<div class="text-justify">
-						<h3 style="color:#d9b46e;">Customer's Review</h3>
+						<h3 style="color:#00923f;">Customer's Review</h3>
 						<p><?php echo $pof->pcust_review;?></p>
 						<p class="text-right">- <?php echo $pof->pcust_name; ?></p>
 					</div>					

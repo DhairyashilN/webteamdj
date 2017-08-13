@@ -26,7 +26,7 @@ nav.navbar{
 /* Navbar Styles */
 .navbar-black {background-color:#0a0b0c;height:150px;border-bottom:3px solid #d9b46e;}
 .navbar-black-right{padding:50px 0px;margin-right:0px;}
-.navbar-black-right>li>a{text-decoration:none;color:#fff !important;font-size:16px;margin-left:30px;text-transform:uppercase;letter-spacing:2px;}
+.navbar-black-right>li>a{text-decoration:none;color:#fff !important;font-size:16px;margin-left:20px;text-transform:uppercase;letter-spacing:2px;}
 .navbar-black-right>li>a:hover{text-decoration:none;background-color:#d9b46e !important;color:#fff !important;}
 .navbar-black-right>li>a.active{background-color:#d9b46e;}
 .works-menu{background-color:#d9b46e;padding:0px 0;}
@@ -78,6 +78,9 @@ nav.navbar{
 .spare-details h2{color: #fff; margin-top: 0px;}
 .spare-carousel>.item>img {line-height:1;height:350px !important;width:100%;}
 .spare-details li{color:#fff;}
+/* Work Page Styles */
+.detail-box{background-color:#fff;padding:20px 20px;}
+.detail-box p, .detail-box li{color:#000;}
 /* Event Page Styles */
 .events{padding:50px 0px;}
 .event-box{padding-bottom:30px;}
