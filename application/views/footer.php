@@ -6,10 +6,12 @@
 				<ul class="footer-lists">
 					<li><a href="<?php echo site_url('home');?>">Home</a></li>
 					<li><a href="<?php echo site_url('about');?>">About</a></li>
-					<li><a href="<?php echo site_url('work');?>">Work</a></li>
-					<li><a href="<?php echo site_url('work');?>">Accessories</a></li>
-					<li><a href="<?php echo site_url('work');?>">Events</a></li>
-					<li><a href="<?php echo site_url('work');?>">Contact</a></li>
+					<li><a href="<?php echo site_url('services');?>">Services</a></li>
+					<li><a href="<?php echo '#';?>">Work</a></li>
+					<li><a href="<?php echo site_url('spares-and-accessories');?>">Spares</a></li>
+					<li><a href="<?php echo site_url('media');?>">Media</a></li>
+					<li><a href="<?php echo site_url('events');?>">Events</a></li>
+					<li><a href="<?php echo site_url('contact');?>">Contact</a></li>
 				</ul>
 			</div>
 			<div class="col-lg-4 col-sm-4 col-sm-12">
@@ -41,7 +43,7 @@
 				<!-- <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> -->
 			</div>
 			<div class="col-lg-4 col-sm-4">
-				<p class="text-right">Handcrafted by DhairYASHil </p>
+				<p class="text-right">Handcrafted in <img src="https://png.icons8.com/india/color/48" title="India" width="24" height="24"> by DhairYASHil  </p>
 			</div>
 		</div>
 		<div class="row visible-xs visible-sm">
@@ -60,11 +62,11 @@
 <!-- Bootstrap Core JavaScript -->
 <script src="<?php echo base_url();?>assets/js/bootstrap.min.js"></script>
 <script src="<?php echo base_url();?>assets/js/image_loader.js"></script>
-<!-- XZOOM JQUERY PLUGIN  -->
-<script src="<?php echo base_url();?>assets/js/xzoom/dist/xzoom.min.js"></script>
+<!-- Image Gallery PLUGIN  -->
+<script src="<?php echo base_url();?>assets/js/jquery.swipebox.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
-		$(".xzoom").xzoom();
+		$('.swipebox').swipebox();
 		$(".works-dropdown").mouseover(function () {
 			$(".works-menu").slideDown('slow');
 		});
@@ -86,13 +88,16 @@
 		$('html, body').animate({scrollTop : 0},800);
 		return false;
 	});
-	/*$(window).scroll(function() {
+	$(window).scroll(function() {
 		if ($(document).scrollTop() > 50) {
-			$('nav').addClass('shrink');
+			$('.navbar-black').css('display','none');
+			$('.navbar-black-2').css('display','block');
 		} else {
-			$('nav').removeClass('shrink');
+			// $('nav').removeClass('shrink');
+			$('.navbar-black').css('display','block');
+			$('.navbar-black-2').css('display','none');
 		}
-	});*/
+	});
 	$('.submit-contact').on('click',function(e) {
 		e.preventDefault();
 		if ($('#name,#phone,#email,#message').val() == '') {

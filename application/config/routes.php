@@ -55,6 +55,7 @@ $route['page-not-found'] = 'pageNotFoundController';
 $route['home'] = 'WelcomeController/index';
 $route['about'] = 'WelcomeController/about';
 $route['services'] = 'WelcomeController/services';
+$route['media'] = 'WelcomeController/media';
 $route['events'] = 'WelcomeController/events';
 $route['spares-and-accessories'] = 'WelcomeController/spares';
 $route['contact'] = 'WelcomeController/contact';

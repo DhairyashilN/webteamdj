@@ -21,7 +21,7 @@
 	<!-- ======== Spares Section ========= -->
 	<section class="spares">
 		<div class="container">
-			<div class="row">
+			<div class="row detail-box">
 				<div class="col-lg-12">
 					<?php
 					if (isset($ObjEvent) && !empty($ObjEvent)) {

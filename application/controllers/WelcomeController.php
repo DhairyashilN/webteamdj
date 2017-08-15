@@ -33,6 +33,11 @@ class WelcomeController extends CI_Controller {
 		$this->load->view('services', $data);
 	}
 
+	public function media(){
+		$data = array('title' => 'Media');
+		$this->load->view('media', $data);
+	}
+
 	public function events(){
 		$this->db->select('title,url,poster_image');
 		$this->db->from('events_tbl');

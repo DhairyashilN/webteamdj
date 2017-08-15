@@ -3,10 +3,10 @@
 	<section class="page-breadcrumb">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-6">
+				<div class="col-lg-6 col-sm-6">
 					<h3>Spares and Accessories</h3>
 				</div>
-				<div class="col-lg-6">
+				<div class="col-lg-6 col-sm-6">
 					<ol class="breadcrumb">
 						<li><a href="<?php echo base_url() ?>">Home</a></li>
 						<li class="active">Spares and Accessories</li>
@@ -29,7 +29,7 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-lg-3">
+				<div class="col-lg-3 col-sm-3">
 					<div class="panel panel-default spares-category">
 						<div class="panel-heading">
 							<h3 class="panel-title">Filter by Category</h3>
@@ -43,15 +43,15 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-9">
+				<div class="col-lg-9 col-sm-9">
 					<div class="row">
 						<?php if (isset($products) && !empty($products)){ 
 							foreach ($products as $pro) {
 								$enq = 'enq'.$pro['id'];
 								?>
-								<div class="col-lg-4">
+								<div class="col-lg-4 col-sm-4">
 									<div class="product-box thumbnail">
-										<img src="<?php echo base_url(); ?><?php echo str_replace('../','',$pro['thubnail_image'])?>" style="height:200px;width:100%">
+										<img src="<?php echo base_url(); ?><?php echo str_replace('../','',$pro['thubnail_image'])?>">
 										<p style="color:#000;"><?php echo $pro['name']; ?></p>
 										<a href="<?php echo site_url('spares-and-accessories/spare/'.$pro['url']);?>"><button class="btn btn-green btn-block">Details</button></a>
 									</div>
