@@ -1,7 +1,7 @@
 <?php 
 class Portfolio_model extends CI_Model{
     public function store_portfolio(){
-        $extension  = array("jpeg","jpg","png","gif");
+        $extension  = array("jpeg","jpg","png","gif","JPG","JPEG");
         $data['ptitle'] = $this->input->post('pof_name');
         $data['purl'] = $this->input->post('pof_url');
         $data['pcategory'] = $this->input->post('pof_category');

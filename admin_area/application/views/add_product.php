@@ -35,14 +35,16 @@
                             </div>';
                         } ?>
                         <?php if (isset($ObjProduct) && !empty($ObjProduct)): ?>
-                            <?php foreach ($ObjProduct as $product): ?>
+                            <?php foreach ($ObjProduct as $product): 
+                                $product_id = $product->id;
+                            ?>
                                 <?php echo form_open_multipart('ProductController/store_product', array('id' => 'productForm', 'class' => 'form-horizontal','autocomplete' => 'off'));?>
                                 <div class="box-body">
                                     <input type="hidden" name="p_id" value="<?php echo $product->id;?>">
                                     <div class="form-group">
                                         <label for="inputEmail3" class="col-sm-2 control-label">Product Name</label>
                                         <div class="col-sm-7">
-                                        <input type="text" class="form-control" id="product_name" name="product_name" value="<?php echo $product->name;?>" tabindex="1" onkeyup="addslash();" required>
+                                            <input type="text" class="form-control" id="product_name" name="product_name" value="<?php echo $product->name;?>" tabindex="1" onkeyup="addslash();" required>
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -74,10 +76,20 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
+                                        <label for="inputEmail3" class="col-sm-2 control-label">Product Thumbnail Image</label>
+                                        <div class="col-sm-7">
+                                            <img src="../../<?php echo $product->thubnail_image;?>" style="height:100px;width:100px"><br><br>
+                                            <input type="file" name="product_thumb_image" id="product_thumb_image" class="form-control" accept="image/*" tabindex="4">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
                                         <label for="inputEmail3" class="col-sm-2 control-label">Product Images</label>
                                         <div class="col-sm-7">
                                             <?php foreach ($ArrProductImage as $pimage){ ?>
-                                            <img src="../../<?php echo $pimage['image'];?>" style="height:100px;width:100px">
+                                            <div class="thumbnail">
+                                                <img src="../../<?php echo $pimage['image'];?>" style="height:100px;width:100px">
+                                                <button type="button" class="btn btn-danger btn-xs btn-flat" onclick="if(confirm('Are you want to delete this image?'))delete_img(<?php echo $pimage['id'];?>)">Delete</button>
+                                            </div>
                                             <?php } ?><br><br>
                                             <input type="file" name="product_image[]" id="product_image" class="form-control" multiple tabindex="4">
                                         </div>
@@ -192,6 +204,21 @@
         var str = document.getElementById('product_name').value;
         result = str.replace(/\s+/g, '-').toLowerCase()
         document.getElementById('product_url').value = result;
+    }
+    function delete_img(id){
+        if(id!=''){
+            $.ajax({
+                type : 'POST',
+                url  : '<?php echo site_url('ProductController/remove_product_image'); ?>',
+                data : {image:id,product:<?php echo isset($product_id)?$product_id:'a'?>,<?php echo $this->security->get_csrf_token_name(); ?>:'<?php echo $this->security->get_csrf_hash();?>'},
+                success:function(data) {
+                    var result = $.parseJSON(data);
+                    if(result['success'] == 1){
+                        location.reload();
+                    }             
+                }
+            });
+        }
     }
 </script>
 <?php $this->load->view('footer'); ?>

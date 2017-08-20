@@ -49,7 +49,7 @@ class ProductController extends CI_Controller {
 			if (!empty($this->input->post('p_id'))) {
 				$result = $this->Product_model->store_product();
 				if ($result) {
-					$this->session->set_flashdata('msg', 'Product Added');
+					$this->session->set_flashdata('msg', 'Product Updated');
 					redirect('backend/products');
 				}
 			} else {
@@ -82,5 +82,18 @@ class ProductController extends CI_Controller {
 		$this->db->update('productimages_tbl',$isdelete);
 		$this->session->set_flashdata('msg','Product Deleted');
 		redirect('backend/products');
+	}
+
+	public function remove_product_image(){
+		$this->db->where('id',$this->input->post('image'));
+		$this->db->where('product_id',$this->input->post('product'));
+		$this->db->trans_start();
+		$this->db->delete('productimages_tbl');
+		if($this->db->trans_status() === FALSE){
+			$this->db->trans_rollback();
+		}else{
+			$this->db->trans_complete();
+			echo json_encode(['success'=>1]);
+		}
 	}
 }

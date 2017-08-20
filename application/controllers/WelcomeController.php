@@ -52,6 +52,7 @@ class WelcomeController extends CI_Controller {
 		$this->db->where('isdelete','0');
 		$ArrCat = $this->db->get('category_tbl')->result_array();
 		$this->db->where('isdelete','0');
+		$this->db->where('	isvisible','1');
 		$ArrProduct = $this->db->get('products_tbl')->result_array();
 		$this->db->where('isdelete','0');
 		$ArrProductImage = $this->db->get('productimages_tbl')->result_array();

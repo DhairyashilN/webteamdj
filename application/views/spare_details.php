@@ -34,7 +34,6 @@
 							<?php $i++; ?>
 							<?php } ?>
 						</div>
-					</div>
 					<!-- Controls -->
 					<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
 						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -43,9 +42,10 @@
 					<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
 						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 						<span class="sr-only">Next</span>
-					</a><br>
+					</a>
+					</div><br>
 					<div class="text-right">
-						<a href="#" data-toggle="modal" data-target="#penq<?php echo $product->id;?>"><button class="btn btn-red btn-lg">Send Enquiry</button></a>
+						<button class="btn btn-red btn-lg" data-toggle="modal" data-target="#penq<?php echo $product->id;?>">Send Enquiry</button>
 					</div>
 				</div> 
 				<div class="col-lg-6">

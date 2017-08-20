@@ -43,14 +43,14 @@
 				<!-- <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> -->
 			</div>
 			<div class="col-lg-4 col-sm-4">
-				<p class="text-right">Handcrafted in <img src="https://png.icons8.com/india/color/48" title="India" width="24" height="24"> by DhairYASHil  </p>
+				<p class="text-right">Handcrafted in <img src="https://png.icons8.com/india/color/48" title="India" width="24" height="24"> by TECHJAY Digital  </p>
 			</div>
 		</div>
 		<div class="row visible-xs visible-sm">
 			<div class="col-xs-12">
 				<div class="text-center">
 					<p>&copy; <?php echo date('Y') ?> TEAM DJ Customs. All Rights Reserved.</p>
-					<p>Handcrafted by DhairYASHil </p>
+					<p>Handcrafted in <img src="https://png.icons8.com/india/color/48" title="India" width="24" height="24"> by TECHJAY Digital</p>
 				</div>
 			</div>
 		</div>
@@ -64,6 +64,7 @@
 <script src="<?php echo base_url();?>assets/js/image_loader.js"></script>
 <!-- Image Gallery PLUGIN  -->
 <script src="<?php echo base_url();?>assets/js/jquery.swipebox.js"></script>
+<script src="<?php echo base_url();?>assets/js/validations.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
 		$('.swipebox').swipebox();

@@ -47,14 +47,14 @@
 					<div class="row">
 						<?php if (isset($products) && !empty($products)){ 
 							foreach ($products as $pro) {
-								$enq = 'enq'.$pro['id'];
 								?>
 								<div class="col-lg-4 col-sm-4">
-									<div class="product-box thumbnail">
-										<img src="<?php echo base_url(); ?><?php echo str_replace('../','',$pro['thubnail_image'])?>">
-										<p style="color:#000;"><?php echo $pro['name']; ?></p>
-										<a href="<?php echo site_url('spares-and-accessories/spare/'.$pro['url']);?>"><button class="btn btn-green btn-block">Details</button></a>
-									</div>
+									<a href="<?php echo site_url('spares-and-accessories/spare/'.$pro['url']);?>">
+										<div class="product-box thumbnail">
+											<img src="<?php echo base_url(); ?><?php echo str_replace('../','',$pro['thubnail_image'])?>">
+											<p style="color:#000;"><?php echo $pro['name']; ?></p>
+										</div>
+									</a>
 								</div>
 								<?php }}else{?>
 								<h4 class="text-center" style="color:#fff">No Spare found for selected category</h4>

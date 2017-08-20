@@ -1,7 +1,7 @@
 <?php 
 class Event_model extends CI_Model {
         public function store_event() {
-                $extension  = array("jpeg","jpg","png","gif");
+                $extension  = array("jpeg","jpg","png","gif","JPG","JPEG");
                 $data['title'] = $this->input->post('event_name');
                 $data['url']   = $this->input->post('event_url');
                 $data['category'] = $this->input->post('event_category');

@@ -47,7 +47,8 @@
 				<div class="col-lg-6 col-sm-6">
 					<div class="contact-map">
 						<h3>Our Location</h3><br>
-						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1031.476203563863!2d74.23818579999997!3d16.6979979!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc10014e7a6a86f%3A0xc4e4624e31432372!2sTeam+DJ+(Royal+Enfield)!5e0!3m2!1sen!2s!4v1501667528975" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+						<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1031.476203563863!2d74.23818579999997!3d16.6979979!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc10014e7a6a86f%3A0xc4e4624e31432372!2sTeam+DJ+(Royal+Enfield)!5e0!3m2!1sen!2s!4v1501667528975" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe> -->
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3821.579871295685!2d74.23554251486685!3d16.697894288495224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc10014ef5fd1f5%3A0x5db025ebb567d272!2sTeam+DJ+Customs!5e0!3m2!1sen!2sin!4v1502860109672" height="450" frameborder="0" style="border:0;width:100%" allowfullscreen></iframe>
 					</div>
 				</div>
 				<div class="col-lg-6 col-sm-6">

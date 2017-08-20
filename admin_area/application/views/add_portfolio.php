@@ -96,7 +96,7 @@
                                 <div class="form-group">
                                     <label for="inputEmail3" class="col-sm-2 control-label">Customer Name</label>
                                     <div class="col-sm-7">
-                                    <input type="text" class="form-control" id="pof_cname" name="pof_cname" value="<?php echo $pof->pcust_name;?>" tabindex="7" required>
+                                        <input type="text" class="form-control" id="pof_cname" name="pof_cname" value="<?php echo $pof->pcust_name;?>" tabindex="7" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -187,25 +187,25 @@
 </aside><!-- /.right-side -->
 </div><!-- ./wrapper -->
 <script type="text/javascript">
-        function addslash(){
-            var str = document.getElementById('pof_name').value;
-            result = str.replace(/\s+/g, '-').toLowerCase()
-            document.getElementById('pof_url').value = result;
+    function addslash(){
+        var str = document.getElementById('pof_name').value;
+        result = str.replace(/\s+/g, '-').toLowerCase()
+        document.getElementById('pof_url').value = result;
+    }
+    function delete_img(id){
+        if(id!=''){
+            $.ajax({
+                type:'POST',
+                url:'<?php echo site_url('PortfolioController/remove_portfolio_image'); ?>',
+                data:{image:id,portfolio:<?php echo isset($pof_id)?$pof_id:'a';?>,<?php echo $this->security->get_csrf_token_name();?>:'<?php echo $this->security->get_csrf_hash();?>'},
+                success:function(data){
+                    var result = $.parseJSON(data);
+                    if(result['success'] == 1){
+                        location.reload();
+                    }             
+                }
+            });
         }
-        function delete_img(id){
-            if(id!=''){
-                $.ajax({
-                    type : 'POST',
-                    url  : '<?php echo site_url('PortfolioController/remove_portfolio_image'); ?>',
-                    data : {image:id,portfolio:<?php echo isset($pof_id)?$pof_id:'';?>,<?php echo $this->security->get_csrf_token_name(); ?>:'<?php echo $this->security->get_csrf_hash();?>'},
-                    success:function(data) {
-                        var result = $.parseJSON(data);
-                        if(result['success'] == 1){
-                            location.reload();
-                        }             
-                    }
-                });
-            }
-        }
+    }
 </script>
 <?php $this->load->view('footer'); ?>
