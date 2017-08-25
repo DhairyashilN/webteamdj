@@ -36,7 +36,9 @@
 						<div class="carousel-inner event-carousel" role="listbox">
 							<?php foreach ($ArrPortfolioImage as $pimage) {  ?>
 							<div class="item <?php if ($i == 1){echo 'active';}?>">
-								<img class="img img-responsive" src="<?php echo base_url(); ?><?php echo str_replace('../','',$pimage['image'])?>"/>
+								<a href="<?php echo base_url(); ?><?php echo str_replace('../','',$pimage['image'])?>" class="swipebox" title="<?php echo $pof->ptitle;?>">
+									<img class="img img-responsive" src="<?php echo base_url(); ?><?php echo str_replace('../','',$pimage['image'])?>" oncontextmenu="return false;"/>	
+								</a>
 							</div>
 							<?php $i++; ?>
 							<?php } ?>

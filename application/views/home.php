@@ -12,7 +12,7 @@
 					</div>
 				</div>
 				<div class="item">
-					<img src="<?php echo base_url(); ?>assets/images/footer_bg.png" alt="..." class="img img-responsive" style="width: 100%" >
+					<img src="<?php echo base_url(); ?>assets/images/footer_bg.jpg" alt="..." class="img img-responsive" style="width: 100%" >
 					<div class="carousel-caption">
 						<h2>TEAM DJ Bike Customization</h2>
 					</div>
