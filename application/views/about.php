@@ -20,7 +20,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
-					<img src="<?php echo base_url();?>assets/images/teamdj.jpg" class="img img-responsive" style="height:500px;width: 100%">
+					<img src="<?php echo base_url();?>assets/images/teamdj.jpg" class="img img-responsive" style="height:600px;width: 100%">
 				</div>
 			</div>
 		</div>
@@ -31,8 +31,9 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12 col-sm-12">
-					<p class="text-justify">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc
-					Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc</p>
+					<p class="text-justify">Team DJ is a family of riding and racing enthusiast members based in Kolhapur. Founded in 2013 by DUSHYANT JADHAV who is an automobile and racing enthusiast. It is all about his passion and love towards bikes which got him into customization and in rider mania 2013 he won 1st runner up title for the cleanest bike which highly motivated his passion to get into profession.<br/>
+					Team DJ basically use the Royal Enfield as a base and prefers to customize bike with stock chassis so that if needed it can be easily reversed to the stock bike. Friendly and versatile riding style is the main thought behind every custom build. Each machine is designed with stringent quality control techniques and ensured that it not only looks spectacular but also rides with superlative quality. None of the bikes we customize are same, the designs vary as per the necessity of the theme and as per clients requirement.<br/>
+					Orange Fury, Mad Max, I-Squad are some of the popular builds by Team DJ.</p>
 				</div>
 			</div>
 		</div>
@@ -44,32 +45,13 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<h2>Awards</h2>
-					<hr class="star-light">
+					<img src="<?php echo base_url();?>/assets/images/Graphic12.png" class="img img-responsive" style="margin:0px auto;width: 200px;">
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-lg-3 col-sm-3">
+				<div class="col-lg-12 col-sm-12">
 					<div class="about-awards-images">
-						<img src="<?php echo base_url(); ?>assets/images/award.png" class="img img-responsive">	
-						<p>Moto Racing Winner</p>		
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-3">
-					<div class="about-awards-images">
-						<img src="<?php echo base_url(); ?>assets/images/award.png" class="img img-responsive">	
-						<p>Moto Racing Winner</p>		
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-3">
-					<div class="about-awards-images">
-						<img src="<?php echo base_url(); ?>assets/images/award.png" class="img img-responsive">	
-						<p>Moto Racing Winner</p>		
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-3">
-					<div class="about-awards-images">
-						<img src="<?php echo base_url(); ?>assets/images/award.png" class="img img-responsive">	
-						<p>Moto Racing Winner</p>		
+						<img src="<?php echo base_url(); ?>assets/images/award.jpg" class="img img-responsive" >	
 					</div>
 				</div>
 			</div>

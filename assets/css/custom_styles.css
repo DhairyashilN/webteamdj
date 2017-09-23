@@ -127,9 +127,9 @@ p{color:#fff;font-size:16px;}
 /* hr styles*/
 hr.star-light{border-color:#fff;}
 hr.star-light,hr.star-primary{padding:2px;border:none;border-top:solid 2px #d9b46e;border-bottom:solid 2px #d9b46e;text-align:center;max-width:250px;margin:30px auto 25px;}
-hr.star-light:after{background-color:#1e1e1e;color:#d9b46e;}
-hr.star-light.head:after {background-color:#f1f1f1;color:#000;}
-hr.star-light:after,hr.star-primary:after{content: "\f005";font-family:FontAwesome;display:inline-block;position:relative;top:-1em;font-size:25px;padding:0.25em;}
+/*hr.star-light:after{background-color:#1e1e1e;color:#d9b46e;}*/
+/*hr.star-light.head:after {background-color:#f1f1f1;color:#000;}*/
+/*hr.star-light:after,hr.star-primary:after{content: "\f005";font-family:FontAwesome;display:inline-block;position:relative;top:-1em;font-size:25px;padding:0.25em;}*/
 .scrollToTop{width:50px;height:50px;padding:15px;text-align:center;background:#da251d;font-weight:bold;color:#444;text-decoration:none;position:fixed;bottom:100px;right:30px;display:none;}
 .scrollToTop:hover{	text-decoration:none;}
 /* Responsive Styles */
