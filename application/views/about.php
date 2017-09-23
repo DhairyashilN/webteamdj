@@ -32,7 +32,7 @@
 			<div class="row">
 				<div class="col-lg-12 col-sm-12">
 					<p class="text-justify">Team DJ is a family of riding and racing enthusiast members based in Kolhapur. Founded in 2013 by DUSHYANT JADHAV who is an automobile and racing enthusiast. It is all about his passion and love towards bikes which got him into customization and in rider mania 2013 he won 1st runner up title for the cleanest bike which highly motivated his passion to get into profession.<br/>
-					Team DJ basically use the Royal Enfield as a base and prefers to customize bike with stock chassis so that if needed it can be easily reversed to the stock bike. Friendly and versatile riding style is the main thought behind every custom build. Each machine is designed with stringent quality control techniques and ensured that it not only looks spectacular but also rides with superlative quality. None of the bikes we customize are same, the designs vary as per the necessity of the theme and as per clients requirement.<br/>
+						Team DJ basically use the Royal Enfield as a base and prefers to customize bike with stock chassis so that if needed it can be easily reversed to the stock bike. Friendly and versatile riding style is the main thought behind every custom build. Each machine is designed with stringent quality control techniques and ensured that it not only looks spectacular but also rides with superlative quality. None of the bikes we customize are same, the designs vary as per the necessity of the theme and as per clients requirement.<br/>
 					Orange Fury, Mad Max, I-Squad are some of the popular builds by Team DJ.</p>
 				</div>
 			</div>
@@ -45,7 +45,7 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<h2>Awards</h2>
-					<img src="<?php echo base_url();?>/assets/images/Graphic12.png" class="img img-responsive" style="margin:0px auto;width: 200px;">
+					<p class="subtitle fancy"><span><i class="fa fa-star" aria-hidden="true"></i></span></p>
 				</div>
 			</div>
 			<div class="row">
@@ -64,7 +64,7 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<h2>Meet Our Experts</h2>
-					<hr class="star-light">
+					<p class="subtitle fancy"><span><i class="fa fa-star" aria-hidden="true"></i></span>
 				</div>
 			</div>
 			<div class="row">

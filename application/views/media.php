@@ -21,7 +21,7 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<h2>Coverage in Print Media</h2>
-					<hr class="star-light">
+					<p class="subtitle fancy"><span><i class="fa fa-star" aria-hidden="true"></i></span>
 				</div>
 			</div>
 			<div class="row">
@@ -63,9 +63,9 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<h2>Videos</h2>
-					<hr class="star-light">
+					<p class="subtitle fancy"><span><i class="fa fa-star" aria-hidden="true"></i></span>
 				</div>
-			</div>
+			</div><br>
 			<div class="row">
 				<div class="col-lg-4 col-sm-4">
 					<!-- 16:9 aspect ratio -->

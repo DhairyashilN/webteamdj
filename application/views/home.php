@@ -39,7 +39,7 @@
 	<!-- ========== Introduction Section ========== -->
 	<section class="home-intro">
 		<h1 class="text-center">Wel-Come to TEAM DJ Customs</h1>
-		<hr class="star-light">
+		<p class="subtitle fancy"><span><i class="fa fa-star" aria-hidden="true"></i></span>
 		<p>TEAM DJ is Kolhapur based custom bike makers. We have speciality in customizing Bullets.</p>
 		<p><a href="<?php echo site_url('contact');?>"><button class="btn btn-red btn-lg">Get in Touch with Us</button></a></p>
 	</section>
@@ -67,7 +67,7 @@
 	<!-- ========== Home Services Section ========== -->
 	<section class="home-services">
 		<h1>Our Services</h1>
-		<hr class="star-light">
+		<p class="subtitle fancy"><span><i class="fa fa-star" aria-hidden="true"></i></span>
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-4 col-sm-4">
@@ -122,7 +122,7 @@
 	<!-- ========== Testimonials Section ========== -->
 	<section class="home-testimonials">
 		<h1 class="text-center">Our Happy Clients say</h1>
-		<hr class="star-light">
+		<p class="subtitle fancy"><span><i class="fa fa-star" aria-hidden="true"></i></span>
 		<div class="container">
 			<div class="row text-center">
 				<div class="col-lg-12">

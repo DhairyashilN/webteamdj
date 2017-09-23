@@ -32,9 +32,9 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<h2>Our Services</h2>
-					<hr class="star-light">
+					<p class="subtitle fancy"><span><i class="fa fa-star" aria-hidden="true"></i></span>
 				</div>
-			</div>
+			</div><br>
 			<div class="row">
 				<div class="col-lg-4">
 					<div class="service-desc-details">
