@@ -42,7 +42,7 @@
 					</div>
 				</div>
 			</div>
-			<hr class="star-light">
+			<p class="subtitle fancy"><span><i class="fa fa-star" aria-hidden="true"></i></span>
 			<div class="row">
 				<div class="col-lg-6 col-sm-6">
 					<div class="contact-map">

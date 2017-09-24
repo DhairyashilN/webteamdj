@@ -87,13 +87,15 @@ if it's not present, don't show loader */
 /* Work Page Styles */
 .detail-box{background-color:#fff;padding:20px 20px;margin: 0px 0px;}
 .detail-box p, .detail-box li{color:#000;}
+.portfolio-carousel{background: #1e1e1e;}
+.portfolio-img{margin:0px auto !important ;height:500px !important;}
 /* Event Page Styles */
 .events{padding:50px 0px;}
 .event-box{padding-bottom:30px;}
 .event-box h4{color:#fff;text-align:center;background:#00923f;padding:10px 0px;margin:0px auto;}
 .event-carousel>.item>img {line-height:1;height:600px !important;max-width:1366px;}
 /* Contact Page Styles*/
-.contact-details{background-color:#1e1e1e;padding: 80px 0px;color:#fff;}
+.contact-details{background-color:#1e1e1e;padding:0px 0px 30px 0px;color:#fff;}
 .contact-box{text-align:center;padding:25px 25px 25px 25px;}
 /* Footer Styles */
 footer{padding:30px 0px;background-color:#0a0b0c;}

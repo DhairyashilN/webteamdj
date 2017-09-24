@@ -33,11 +33,11 @@
 					<div id="carousel-example-generic" class="carousel slide carousel-fade"" data-ride="carousel">
 						<!-- Wrapper for slides -->
 						<?php $i = 1; ?>
-						<div class="carousel-inner event-carousel" role="listbox">
+						<div class="carousel-inner portfolio-carousel" role="listbox">
 							<?php foreach ($ArrPortfolioImage as $pimage) {  ?>
 							<div class="item <?php if ($i == 1){echo 'active';}?>">
 								<a href="<?php echo base_url(); ?><?php echo str_replace('../','',$pimage['image'])?>" class="swipebox" title="<?php echo $pof->ptitle;?>">
-									<img class="img img-responsive" src="<?php echo base_url(); ?><?php echo str_replace('../','',$pimage['image'])?>" oncontextmenu="return false;"/>	
+									<img class="img img-responsive portfolio-img" src="<?php echo base_url(); ?><?php echo str_replace('../','',$pimage['image'])?>" oncontextmenu="return false;"/>	
 								</a>
 							</div>
 							<?php $i++; ?>
