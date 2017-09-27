@@ -38,101 +38,107 @@
 	<!-- ========== End Slider Section ========== -->
 	<!-- ========== Introduction Section ========== -->
 	<section class="home-intro">
-		<h1 class="text-center">Wel-Come to TEAM DJ Customs</h1>
-		<p class="subtitle fancy"><span><i class="fa fa-star" aria-hidden="true"></i></span>
-		<p>TEAM DJ is Kolhapur based custom bike makers. We have speciality in customizing Bullets.</p>
-		<p><a href="<?php echo site_url('contact');?>"><button class="btn btn-red btn-lg">Get in Touch with Us</button></a></p>
-	</section>
-	<section class="home-summary">
-		<div class="layer">
-		</div>
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-4 col-sm-4 text-center ">
-					<img src="<?php echo base_url(); ?>assets/images/awards.png" alt="...">
-					<h2 class="font-bold">10+ Awards</h2>	
-				</div>
-				<div class="col-lg-4 col-sm-4 text-center ">
-					<img src="<?php echo base_url(); ?>assets/images/repair.png" alt="...">
-					<h2 class="font-bold">15+ Bikes Customized</h2>	
-				</div>
-				<div class="col-lg-4 col-sm-4 text-center ">
-					<img src="<?php echo base_url(); ?>assets/images/team.png" alt="...">
-					<h2 class="font-bold">100+ Clients</h2>	
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- ========== End Introduction Section ========== -->
-	<!-- ========== Home Services Section ========== -->
-	<section class="home-services">
-		<h1>Our Services</h1>
-		<p class="subtitle fancy"><span><i class="fa fa-star" aria-hidden="true"></i></span>
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-4 col-sm-4">
-					<div class="service-desc">
-						<img src="<?php echo base_url(); ?>assets/images/restore.png" alt="...">
-						<h3>Restoration</h3>
-						<a href="<?php echo site_url('services');?>#services-details"><button class="btn btn-green"> Read More</button></a>
-					</div>
-				</div>
-				<div class="col-lg-4 col-sm-4">
-					<div class="service-desc">
-						<img src="<?php echo base_url(); ?>assets/images/spray-gun.png" alt="...">
-						<h3>Paint Jobs</h3>
-						<a href="<?php echo site_url('services');?>#services-details"><button class="btn btn-green"> Read More</button></a>
-					</div>
-				</div>
-				<div class="col-lg-4 col-sm-4">
-					<div class="service-desc">
-						<img src="<?php echo base_url(); ?>assets/images/finish.png" alt="...">
-						<h3>Pro Bikes for Dirt Race</h3>
-						<a href="<?php echo site_url('services');?>#services-details"><button class="btn btn-green"> Read More</button></a>
-					</div>
-				</div>
-			</div>
-			<br><br>
-			<div class="row">
-				<div class="col-lg-4 col-sm-4">
-					<div class="service-desc">
-						<img src="<?php echo base_url(); ?>assets/images/mechanic.png" alt="...">
-						<h3>Bike Customization</h3>
-						<a href="<?php echo site_url('services');?>#services-details"><button class="btn btn-green"> Read More</button></a>
-					</div>
-				</div>
-				<div class="col-lg-4 col-sm-4">
-					<div class="service-desc">
-						<img src="<?php echo base_url(); ?>assets/images/consulting.png" alt="...">
-						<h3>Consultation</h3>
-						<a href="<?php echo site_url('services');?>#services-details"><button class="btn btn-green"> Read More</button></a>
-					</div>
-				</div>
-				<div class="col-lg-4 col-sm-4">
-					<div class="service-desc">
-						<img src="<?php echo base_url(); ?>assets/images/polish.png" alt="...">
-						<h3>Polish & Nano Coating</h3>
-						<a href="<?php echo site_url('services');?>#services-details"><button class="btn btn-green"> Read More</button></a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- ========== End Services Section ========== -->
-	<!-- ========== Testimonials Section ========== -->
-	<section class="home-testimonials">
-		<h1 class="text-center">Our Happy Clients say</h1>
-		<p class="subtitle fancy"><span><i class="fa fa-star" aria-hidden="true"></i></span>
-		<div class="container">
-			<div class="row text-center">
 				<div class="col-lg-12">
-					<p><em>Team DJ is doing great work, they respect their customer values by providing good service. Lorem ipsum dolor sit amet consectetur adipisicing elit Perferendis repudiandae nostrum quibusdam! elit Perferendis repudiandae</em></p>
-					<h2 style="margin-bottom: 20px;"><i class="fa fa-quote-right fa-lg" aria-hidden="true"></i></h2>
-					<p>Mr. Dhairyashil N. Nalawade<br> Kolhapur</p>
+					<h1 class="text-center">Wel-Come to TEAM DJ Customs</h1>
+					<p class="subtitle fancy"><span><i class="fa fa-star" aria-hidden="true"></i></span>
+						<p>TEAM DJ is Kolhapur based custom bike makers. We have speciality in customizing Bullets.</p>
+						<p><a href="<?php echo site_url('contact');?>"><button class="btn btn-red btn-lg">Get in Touch with Us</button></a></p>		
+					</div>
 				</div>
 			</div>
-		</div>
-	</section>
-	<!-- ========== End Testimonials Section ========== -->
-</div>
-<?php $this->load->view('footer');?>
+		</section>
+		<section class="home-summary">
+			<div class="layer">
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-4 col-sm-4 text-center ">
+						<img src="<?php echo base_url(); ?>assets/images/awards.png" alt="...">
+						<h2 class="font-bold">10+ Awards</h2>	
+					</div>
+					<div class="col-lg-4 col-sm-4 text-center ">
+						<img src="<?php echo base_url(); ?>assets/images/repair.png" alt="...">
+						<h2 class="font-bold">15+ Bikes Customized</h2>	
+					</div>
+					<div class="col-lg-4 col-sm-4 text-center ">
+						<img src="<?php echo base_url(); ?>assets/images/team.png" alt="...">
+						<h2 class="font-bold">100+ Clients</h2>	
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- ========== End Introduction Section ========== -->
+		<!-- ========== Home Services Section ========== -->
+		<section class="home-services">
+			<h1>Our Services</h1>
+			<p class="subtitle fancy"><span><i class="fa fa-star" aria-hidden="true"></i></span>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-4 col-sm-4">
+							<div class="service-desc">
+								<img src="<?php echo base_url(); ?>assets/images/restore.png" alt="...">
+								<h3>Restoration</h3>
+								<a href="<?php echo site_url('services');?>#services-details"><button class="btn btn-green"> Read More</button></a>
+							</div>
+						</div>
+						<div class="col-lg-4 col-sm-4">
+							<div class="service-desc">
+								<img src="<?php echo base_url(); ?>assets/images/spray-gun.png" alt="...">
+								<h3>Paint Jobs</h3>
+								<a href="<?php echo site_url('services');?>#services-details"><button class="btn btn-green"> Read More</button></a>
+							</div>
+						</div>
+						<div class="col-lg-4 col-sm-4">
+							<div class="service-desc">
+								<img src="<?php echo base_url(); ?>assets/images/finish.png" alt="...">
+								<h3>Pro Bikes for Dirt Race</h3>
+								<a href="<?php echo site_url('services');?>#services-details"><button class="btn btn-green"> Read More</button></a>
+							</div>
+						</div>
+					</div>
+					<br><br>
+					<div class="row">
+						<div class="col-lg-4 col-sm-4">
+							<div class="service-desc">
+								<img src="<?php echo base_url(); ?>assets/images/mechanic.png" alt="...">
+								<h3>Bike Customization</h3>
+								<a href="<?php echo site_url('services');?>#services-details"><button class="btn btn-green"> Read More</button></a>
+							</div>
+						</div>
+						<div class="col-lg-4 col-sm-4">
+							<div class="service-desc">
+								<img src="<?php echo base_url(); ?>assets/images/consulting.png" alt="...">
+								<h3>Consultation</h3>
+								<a href="<?php echo site_url('services');?>#services-details"><button class="btn btn-green"> Read More</button></a>
+							</div>
+						</div>
+						<div class="col-lg-4 col-sm-4">
+							<div class="service-desc">
+								<img src="<?php echo base_url(); ?>assets/images/polish.png" alt="...">
+								<h3>Polish & Nano Coating</h3>
+								<a href="<?php echo site_url('services');?>#services-details"><button class="btn btn-green"> Read More</button></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- ========== End Services Section ========== -->
+			<!-- ========== Testimonials Section ========== -->
+			<section class="home-testimonials">
+				<h1 class="text-center">Our Happy Clients say</h1>
+				<p class="subtitle fancy"><span><i class="fa fa-star" aria-hidden="true"></i></span>
+					<div class="container">
+						<div class="row text-center">
+							<div class="col-lg-12">
+								<p><em>Team DJ is doing great work, they respect their customer values by providing good service. Lorem ipsum dolor sit amet consectetur adipisicing elit Perferendis repudiandae nostrum quibusdam! elit Perferendis repudiandae</em></p>
+								<h2 style="margin-bottom: 20px;"><i class="fa fa-quote-right fa-lg" aria-hidden="true"></i></h2>
+								<p>Mr. Dhairyashil N. Nalawade<br> Kolhapur</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- ========== End Testimonials Section ========== -->
+			</div>
+			<?php $this->load->view('footer');?>

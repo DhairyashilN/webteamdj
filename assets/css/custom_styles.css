@@ -143,6 +143,22 @@ p{color:#fff;font-size:16px;}
 	.service-desc{margin-bottom:15px;}
   .breadcrumb > li{font-size:12px;}
 }
+@media(max-width:414px) {
+	body{padding-top:115px;}
+	.navbar-black{height:115px;}
+	.navbar-brand img{height:85px;}
+	.navbar-inverse .navbar-toggle{border-color:transparent;}
+	.navbar-inverse .navbar-toggle .icon-bar{background-color:#d9b46e;width:25px;height:3px;}
+	.navbar-inverse .navbar-collapse,.navbar-inverse .navbar-form{border-color:#d9b46e;margin-top:30px;background-color:#0a0b0c;}
+	.navbar-black-right{padding:0px 0px;margin-right:0px;}
+  #bs-example-navbar-collapse-2{margin-top:15px;} 
+	.navbar-toggle{margin-top:40px;}
+	.home-slider{min-height:230px;}
+	.carousel-inner>.item>img{height:230px;width:100%;}
+	.service-desc{margin-bottom:15px;}
+  .breadcrumb > li{font-size:12px;}
+}
+
 @media(max-width:768px) {
 	.navbar-black-right>li>a,.navbar-black-right-2>li>a{font-size:12px;margin-left:5px;text-transform:uppercase;letter-spacing:1px;}
 	.service-desc h3{font-size:16px;}
