@@ -23,7 +23,7 @@
                     <div class="box">
                         <div class="box-header">
                             <h3 class="box-title">
-                                <a href="<?php echo site_url('backend/events');?>" title="Return">
+                                <a href="<?php echo site_url('backend/portfolio');?>" title="Return">
                                     <button class="btn btn-info btn-flat"><i class="fa fa-arrow-circle-left"></i> Return to List</button>
                                 </a>
                             </h3>                                     
@@ -87,7 +87,7 @@
                                         <?php foreach ($ArrPortfolioImage as $pimage){ ?>
                                         <div class="thumbnail">
                                             <img src="../../<?php echo $pimage['image'];?>" style="height:100px;width:100px">
-                                            <button type="button" class="btn btn-danger btn-xs btn-flat" onclick="if(confirm('Are you want to delete this image?'))delete_img(<?php echo $pimage['id'];?>)">Delete</button>
+                                            <button type="button" class="btn btn-danger btn-xs btn-flat" onclick="if(confirm('Are you want to delete this image?'))delete_img('<?php echo $pimage['id'];?>','<?php echo $pimage['image_name'];?>')">Delete</button>
                                         </div>
                                         <?php } ?><br><br>
                                         <input type="file" name="pof_image[]" id="pof_image" class="form-control" tabindex="6" multiple  accept="Image/*">
@@ -192,12 +192,12 @@
         result = str.replace(/\s+/g, '-').toLowerCase()
         document.getElementById('pof_url').value = result;
     }
-    function delete_img(id){
+    function delete_img(id,image){
         if(id!=''){
             $.ajax({
                 type:'POST',
                 url:'<?php echo site_url('PortfolioController/remove_portfolio_image'); ?>',
-                data:{image:id,portfolio:<?php echo isset($pof_id)?$pof_id:'a';?>,<?php echo $this->security->get_csrf_token_name();?>:'<?php echo $this->security->get_csrf_hash();?>'},
+                data:{image:id,portfolio:<?php echo isset($pof_id)?$pof_id:'a';?>,<?php echo $this->security->get_csrf_token_name();?>:'<?php echo $this->security->get_csrf_hash();?>',image_name:image},
                 success:function(data){
                     var result = $.parseJSON(data);
                     if(result['success'] == 1){

@@ -42,6 +42,7 @@ class Portfolio_model extends CI_Model{
                         if(move_uploaded_file($_FILES['pof_image']['tmp_name'][$i],$target_dir.$file_name)){ 
                             $idata['portfolio_id'] = $this->input->post('pof_id');
                             $idata['image'] = $target_dir.$file_name;
+                            $idata['image_name'] = $file_name;
                             $this->db->insert('portfolioimages_tbl',$idata);   
                         }
                     }
@@ -69,6 +70,7 @@ class Portfolio_model extends CI_Model{
                     if(move_uploaded_file($_FILES['pof_image']['tmp_name'][$i],$target_dir.$file_name)){ 
                         $idata['portfolio_id'] = $insert_id;
                         $idata['image'] = $target_dir.$file_name;
+                        $idata['image_name'] = $file_name;
                         $this->db->insert('portfolioimages_tbl',$idata);   
                     }
                 }

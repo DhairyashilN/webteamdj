@@ -92,6 +92,9 @@ class EventController extends CI_Controller{
 		$this->db->where('event_id',$this->input->post('event'));
 		$this->db->trans_start();
 		$this->db->delete('eventimages_tbl');
+		if (file_exists("../assets/images/events/".$this->input->post('image_name'))) {
+			unlink("../assets/images/events/".$this->input->post('image_name'));
+		}
 		if($this->db->trans_status() === FALSE){
 			$this->db->trans_rollback();
 		}else{

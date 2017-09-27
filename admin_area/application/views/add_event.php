@@ -87,7 +87,7 @@
                                         <?php foreach ($ArrEventImage as $pimage){ ?>
                                         <div class="thumbnail">
                                             <img src="../../<?php echo $pimage['image'];?>" style="height:100px;width:100px">
-                                            <button type="button" class="btn btn-danger btn-xs btn-flat" onclick="if(confirm('Are you want to delete this image?'))delete_img(<?php echo $pimage['id'];?>)">Delete</button>
+                                            <button type="button" class="btn btn-danger btn-xs btn-flat" onclick="if(confirm('Are you want to delete this image?'))delete_img('<?php echo $pimage['id'];?>','<?php echo $pimage['image_name'];?>')">Delete</button>
                                         </div>
                                         <?php } ?><br><br>
                                         <input type="file" name="event_image[]" id="event_image" class="form-control" tabindex="4" multiple  accept="Image/*">
@@ -168,12 +168,12 @@
         result = str.replace(/\s+/g, '-').toLowerCase()
         document.getElementById('event_url').value = result;
     }
-    function delete_img(id){
+    function delete_img(id,image){
         if(id!=''){
             $.ajax({
                 type : 'POST',
                 url  : '<?php echo site_url('EventController/remove_event_image'); ?>',
-                data : {image:id,event:<?php echo isset($event_id)?$event_id:'a';?>,<?php echo $this->security->get_csrf_token_name(); ?>:'<?php echo $this->security->get_csrf_hash();?>'},
+                data : {image:id,event:<?php echo isset($event_id)?$event_id:'a';?>,<?php echo $this->security->get_csrf_token_name(); ?>:'<?php echo $this->security->get_csrf_hash();?>',image_name:image},
                 success:function(data) {
                     var result = $.parseJSON(data);
                     if(result['success'] == 1){

@@ -40,6 +40,7 @@ class Event_model extends CI_Model {
                                                 if(move_uploaded_file($_FILES['event_image']['tmp_name'][$i],$target_dir.$file_name)){ 
                                                         $idata['event_id'] = $this->input->post('event_id');
                                                         $idata['image'] = $target_dir.$file_name;
+                                                        $idata['image_name'] = $file_name;
                                                         $this->db->insert('eventimages_tbl',$idata);   
                                                 }
                                         }
@@ -67,6 +68,7 @@ class Event_model extends CI_Model {
                                                 if(move_uploaded_file($_FILES['event_image']['tmp_name'][$i],$target_dir.$file_name)){ 
                                                         $idata['event_id'] = $insert_id;
                                                         $idata['image'] = $target_dir.$file_name;
+                                                        $idata['image_name'] = $file_name;
                                                         $this->db->insert('eventimages_tbl',$idata);   
                                                 }
                                         }
