@@ -48,7 +48,7 @@
 					</div>
 				</div>
 			</div>
-		</section>
+	</section>
 		<section class="home-summary">
 			<div class="layer">
 			</div>
