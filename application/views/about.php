@@ -20,7 +20,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
-					<img src="<?php echo base_url();?>assets/images/teamdj.jpg" class="img img-responsive" style="height:600px;width: 100%">
+					<img src="<?php echo base_url();?>assets/images/teamdj.jpg" class="img img-responsive">
 				</div>
 			</div>
 		</div>

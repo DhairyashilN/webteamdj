@@ -3,10 +3,10 @@
 	<section class="page-breadcrumb">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-6 col-sm-6">
+				<div class="col-lg-6 col-xs-6">
 					<h3>Events</h3>
 				</div>
-				<div class="col-lg-6 col-sm-6">
+				<div class="col-lg-6 col-xs-6">
 					<ol class="breadcrumb">
 						<li><a href="<?php echo base_url() ?>">Home</a></li>
 						<li class="active">Events</li>
