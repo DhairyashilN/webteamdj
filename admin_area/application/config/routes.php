@@ -72,7 +72,7 @@ $route['backend/store_product'] = 'ProductController/store';
 $route['backend/delete_product/(:num)'] = 'ProductController/delete/$1';
 $route['backend/edit_product/(:num)'] = 'ProductController/edit/$1';
 /******* Contact and Enquiry Routes *******/
-$route['backend/contacts'] 	= 'CommController/contact_index';
+$route['backend/contacts'] = 'CommController/contact_index';
 $route['backend/enquiries'] = 'CommController/enquiry_index';
 $route['backend/view_enquiry/(:num)'] = 'CommController/view_enquiry/$1';
 /******* Profile Routes *******/
@@ -87,5 +87,6 @@ $route['backend/portfolio'] = 'PortfolioController/index';
 $route['backend/add_portfolio'] = 'PortfolioController/create';
 $route['backend/edit_portfolio/(:num)'] = 'PortfolioController/edit/$1';
 $route['backend/delete_portfolio/(:num)'] = 'PortfolioController/delete/$1';
-/******* Statistics & Analytics Routes *******/
+/******* Settings Routes *******/
 $route['backend/statistics'] = 'StatisticsController/index';
+$route['backend/settings'] = 'StatisticsController/site_settings';

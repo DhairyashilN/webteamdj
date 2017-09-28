@@ -89,6 +89,10 @@ class ProductController extends CI_Controller {
 		$this->db->where('product_id',$this->input->post('product'));
 		$this->db->trans_start();
 		$this->db->delete('productimages_tbl');
+		//Remove image from directory.
+		if (file_exists("../assets/images/spares/".$this->input->post('image_name'))){
+			unlink("../assets/images/spares/".$this->input->post('image_name'));
+		}
 		if($this->db->trans_status() === FALSE){
 			$this->db->trans_rollback();
 		}else{

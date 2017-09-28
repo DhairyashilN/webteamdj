@@ -97,7 +97,8 @@ class PortfolioController extends CI_Controller{
 		$this->db->where('portfolio_id',$this->input->post('portfolio'));
 		$this->db->trans_start();
 		$this->db->delete('portfolioimages_tbl');
-		if (file_exists("../assets/images/portfolio/".$this->input->post('image_name'))) {
+		//Remove image from directory.
+		if (file_exists("../assets/images/portfolio/".$this->input->post('image_name'))){
 			unlink("../assets/images/portfolio/".$this->input->post('image_name'));
 		}
 		if($this->db->trans_status() === FALSE){

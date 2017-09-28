@@ -21,5 +21,11 @@ class StatisticsController extends CI_Controller{
 		$page_data['ArrProducts'] =	$this->db->get()->result_array();
 		$this->load->view('statistics',$page_data);
 	}
+
+	public function site_settings(){
+		$page_data['title']	= 'Settings';
+		$page_data['menu_active'] = 'stats';
+		$this->load->view('settings',$page_data);
+	}
 } 
 ?>

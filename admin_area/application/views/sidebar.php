@@ -50,12 +50,12 @@
             <li class="treeview <?php if($menu_active == 'stats') echo 'active';?>">
                 <a href="#">
                     <i class="fa fa-bar-chart-o"></i>
-                    <span>Statistics</span>
+                    <span>System</span>
                     <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
+                    <li><a href="<?php echo site_url('backend/settings');?>"><i class="fa fa-angle-double-right"></i> Settings</a></li>
                     <li><a href="<?php echo site_url('backend/statistics');?>"><i class="fa fa-angle-double-right"></i>Statistics</a></li>
-                    <!-- <li><a href="pages/charts/inline.html"><i class="fa fa-angle-double-right"></i> Accessories</a></li> -->
                 </ul>
             </li>
         </ul>

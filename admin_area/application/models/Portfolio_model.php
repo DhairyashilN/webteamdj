@@ -28,11 +28,11 @@ class Portfolio_model extends CI_Model{
             }
             for($i=0;$i<count($_FILES['pof_image']['name']);$i++){
                 if($_FILES['pof_image']["error"][$i] == 4){
-                    $poster = lookup_value('portfolioimages_tbl', 'image',array('portfolio_id'=>$this->input->post('pof_id')));
+                    /*$poster = lookup_value('portfolioimages_tbl', 'image',array('portfolio_id'=>$this->input->post('pof_id')));
                     foreach ($poster as $key=>$value){
                         $idata['image'] = $value; 
                         $this->db->update_batch('portfolioimages_tbl',$idata['image'],$this->input->post('pof_id'));
-                    }
+                    }*/
                 }else{
                  $target_dir = '../assets/images/portfolio/';
                  $file_name  = 'portfimg_'.date('His').$_FILES["pof_image"]["name"][$i];

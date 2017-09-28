@@ -29,11 +29,11 @@ class Product_model extends CI_Model {
                         }
                         for($i=0;$i<count($_FILES['product_image']['name']);$i++){
                                 if($_FILES['product_image']["error"][$i] == 4){
-                                        $poster = lookup_value('productimages_tbl', 'image',array('product_id'=>$this->input->post('p_id')));
+                                        /*$poster = lookup_value('productimages_tbl', 'image',array('product_id'=>$this->input->post('p_id')));
                                         foreach ($poster as $key=>$value){
                                                 $idata['image'] = $value; 
                                                 $this->db->update_batch('productimages_tbl',$idata['image'],$this->input->post('p_id'));
-                                        }
+                                        }*/
                                 }else{
                                         $target_dir = '../assets/images/spares/';
                                         $file_name  = 'proimg_'.date('His').$_FILES["product_image"]["name"][$i];
@@ -43,6 +43,7 @@ class Product_model extends CI_Model {
                                                         if(move_uploaded_file($_FILES['product_image']['tmp_name'][$i],$target_dir.$file_name)){ 
                                                                 $idata['product_id'] = $this->input->post('p_id');
                                                                 $idata['image'] = $target_dir.$file_name;
+                                                                $idata['image_name'] = $file_name;
                                                                 $this->db->insert('productimages_tbl',$idata);   
                                                         }
                                                 }
@@ -76,6 +77,7 @@ class Product_model extends CI_Model {
                                                 move_uploaded_file($_FILES["product_image"]["tmp_name"][$key],$target_dir.$file_name);
                                                 $idata['product_id'] = $insert_id;
                                                 $idata['image'] = $target_dir.$file_name;
+                                                $idata['image_name'] = $file_name;
                                                 $this->db->insert('productimages_tbl',$idata);
                                         }else{
                                                 echo 'not image';

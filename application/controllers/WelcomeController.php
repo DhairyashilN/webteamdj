@@ -214,7 +214,7 @@ class WelcomeController extends CI_Controller {
 		foreach ($view_count as $value) {
 			$view_count = $value->view_count;
 		}
-		$new_count=$view_count+1;
+		(int)$new_count=(int)$view_count+1;
 		$this->db->where('id', $product_id);
 		$this->db->update('products_tbl',['view_count'=>$new_count]);
 		$this->load->view('spare_details', $data);

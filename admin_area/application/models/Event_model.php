@@ -26,11 +26,11 @@ class Event_model extends CI_Model {
                         }
                         for($i=0;$i<count($_FILES['event_image']['name']);$i++){
                                 if($_FILES['event_image']["error"][$i] == 4){
-                                        $event_poster = lookup_value('eventimages_tbl', 'image',array('event_id'=>$this->input->post('event_id')));
+                                        /*$event_poster = lookup_value('eventimages_tbl', 'image',array('event_id'=>$this->input->post('event_id')));
                                         foreach ($event_poster as $key=>$value){
                                                 $idata['image'] = $value; 
                                                 $this->db->update_batch('eventimages_tbl',$idata['image'],$this->input->post('event_id'));
-                                        }
+                                        }*/
                                 }else{
                                    $target_dir = '../assets/images/events/';
                                    $file_name  = 'eventimg_'.date('His').$_FILES["event_image"]["name"][$i];

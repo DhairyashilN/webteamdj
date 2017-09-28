@@ -47,14 +47,14 @@
 				</div>
 			</div><br><br>
 			<div class="row">
-				<div class="col-lg-8">
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit Perferendis repudiandae nostrum quibusdam! elit Perferendis repudiandae.Lorem ipsum dolor sit amet consectetur adipisicing elit Perferendis repudiandae nostrum quibusdam! elit Perferendis repudiandaeLorem ipsum dolor sit amet consectetur adipisicing elit Perferendis repudiandae nostrum quibusdam! elit Perferendis repudiandaeLorem ipsum dolor sit amet consectetur adipisicing elit Perferendis repudiandae nostrum quibusdam! elit Perferendis repudiandae</p>
-				</div>
 				<div class="col-lg-4">
 					<div class="service-desc-details">
 						<img src="<?php echo base_url(); ?>assets/images/spray-gun.png" alt="Paint Jobs">
 						<h3>Paint Jobs</h3>
 					</div>
+				</div>
+				<div class="col-lg-8">
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit Perferendis repudiandae nostrum quibusdam! elit Perferendis repudiandae.Lorem ipsum dolor sit amet consectetur adipisicing elit Perferendis repudiandae nostrum quibusdam! elit Perferendis repudiandaeLorem ipsum dolor sit amet consectetur adipisicing elit Perferendis repudiandae nostrum quibusdam! elit Perferendis repudiandaeLorem ipsum dolor sit amet consectetur adipisicing elit Perferendis repudiandae nostrum quibusdam! elit Perferendis repudiandae</p>
 				</div>
 			</div><br><br>
 			<div class="row">
@@ -69,14 +69,14 @@
 				</div>
 			</div><br><br>
 			<div class="row">
-				<div class="col-lg-8">
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit Perferendis repudiandae nostrum quibusdam! elit Perferendis repudiandae.Lorem ipsum dolor sit amet consectetur adipisicing elit Perferendis repudiandae nostrum quibusdam! elit Perferendis repudiandaeLorem ipsum dolor sit amet consectetur adipisicing elit Perferendis repudiandae nostrum quibusdam! elit Perferendis repudiandaeLorem ipsum dolor sit amet consectetur adipisicing elit Perferendis repudiandae nostrum quibusdam! elit Perferendis repudiandae</p>
-				</div>
 				<div class="col-lg-4">
 					<div class="service-desc-details">
 						<img src="<?php echo base_url(); ?>assets/images/mechanic.png" alt="Bike Customization">
 						<h3>Bike Customization</h3>
 					</div>
+				</div>
+				<div class="col-lg-8">
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit Perferendis repudiandae nostrum quibusdam! elit Perferendis repudiandae.Lorem ipsum dolor sit amet consectetur adipisicing elit Perferendis repudiandae nostrum quibusdam! elit Perferendis repudiandaeLorem ipsum dolor sit amet consectetur adipisicing elit Perferendis repudiandae nostrum quibusdam! elit Perferendis repudiandaeLorem ipsum dolor sit amet consectetur adipisicing elit Perferendis repudiandae nostrum quibusdam! elit Perferendis repudiandae</p>
 				</div>
 			</div><br><br>
 			<div class="row">
@@ -91,14 +91,14 @@
 				</div>
 			</div><br><br>
 			<div class="row">
-				<div class="col-lg-8">
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit Perferendis repudiandae nostrum quibusdam! elit Perferendis repudiandae.Lorem ipsum dolor sit amet consectetur adipisicing elit Perferendis repudiandae nostrum quibusdam! elit Perferendis repudiandaeLorem ipsum dolor sit amet consectetur adipisicing elit Perferendis repudiandae nostrum quibusdam! elit Perferendis repudiandaeLorem ipsum dolor sit amet consectetur adipisicing elit Perferendis repudiandae nostrum quibusdam! elit Perferendis repudiandae</p>
-				</div>
 				<div class="col-lg-4">
 					<div class="service-desc-details">
 						<img src="<?php echo base_url(); ?>assets/images/polish.png" alt="...">
 						<h3>Polish & Nano Coating</h3>
 					</div>
+				</div>
+				<div class="col-lg-8">
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit Perferendis repudiandae nostrum quibusdam! elit Perferendis repudiandae.Lorem ipsum dolor sit amet consectetur adipisicing elit Perferendis repudiandae nostrum quibusdam! elit Perferendis repudiandaeLorem ipsum dolor sit amet consectetur adipisicing elit Perferendis repudiandae nostrum quibusdam! elit Perferendis repudiandaeLorem ipsum dolor sit amet consectetur adipisicing elit Perferendis repudiandae nostrum quibusdam! elit Perferendis repudiandae</p>
 				</div>
 			</div>
 		</div>
