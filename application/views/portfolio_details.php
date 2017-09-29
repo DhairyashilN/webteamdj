@@ -27,7 +27,7 @@
 					<?php
 					if (isset($ObjPortfolio) && !empty($ObjPortfolio)) {
 					foreach ($ObjPortfolio as $pof){ ?>
-					<p style="font-size: 22px;"><?php echo $pof->ptitle;?></p>
+					<h2><?php echo $pof->ptitle;?></h2>
 					<hr>
 					<?php if(empty($ArrPortfolioImage)){?><?php }else{?>
 					<div id="carousel-example-generic" class="carousel slide carousel-fade"" data-ride="carousel">

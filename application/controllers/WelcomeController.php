@@ -2,22 +2,9 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class WelcomeController extends CI_Controller {
-
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
-	 */
+	function __construct(){
+		parent::__construct();
+	}
 	public function index(){
 		$data = array('title' => 'Home');
 		$this->load->view('home', $data);
@@ -247,7 +234,12 @@ class WelcomeController extends CI_Controller {
 		$portfolio_id = lookup_value('portfolio_tbl','id',array('purl'=>$url));
 		$this->db->where('portfolio_id', $portfolio_id);
 		$data['ArrPortfolioImage'] = $this->db->get('portfolioimages_tbl')->result_array();
-		$data['title'] = 'Work | '.$url;
+		$this->db->select('category');
+		$this->db->from('category_tbl');
+		$this->db->where('id',$data['ObjPortfolio'][0]->pcategory);
+		$cat = $this->db->get()->result();
+		$data['ArrPortfolioImage'] = $this->db->get('portfolioimages_tbl')->result_array();
+		$data['title'] = 'Work | '.$cat[0]->category.' | '.$url;
 		$this->load->view('portfolio_details', $data);
 	}
 
