@@ -19,10 +19,11 @@ if ($this->session->userdata('alogin')==1) {
   <!-- Theme style -->
   <link href="<?php echo base_url();?>assets/css/AdminLTE.css" rel="stylesheet" type="text/css" />
 </head>
-<body class="bg-black">
+<body class="bg-black" style="background-color:#0a0b0c !important;">
   <div class="form-box" id="login-box">
     <div class="margin text-center">
-      <h2>TEAM DJ Customs</h2>
+      <img src="../assets/images/logo.png">
+      <!-- <h2>TEAM DJ Customs</h2> -->
       <hr width="25%">
     </div>
     <div class="header">Admin Login</div>
