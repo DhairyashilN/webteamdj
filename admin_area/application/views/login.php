@@ -4,7 +4,7 @@ if ($this->session->userdata('alogin')==1) {
 }
 ?>
 <!DOCTYPE html>
-<html lang="en" class="bg-black">
+<html lang="en" style="background-color:#0a0b0c !important;">
 <head>
   <title>Team DJ Customs | <?php echo !empty($title) ? $title : '' ?></title>
   <!-- CSS And JavaScript -->
