@@ -127,7 +127,7 @@
 			<!-- ========== End Services Section ========== -->
 			<!-- ========== Testimonials Section ========== -->
 			<section class="home-testimonials">
-				<h1 class="text-center">Our Happy Clients say</h1>
+				<h1>Our Happy Clients say</h1>
 				<p class="subtitle fancy"><span><i class="fa fa-star" aria-hidden="true"></i></span>
 					<div class="container">
 						<div class="row text-center">

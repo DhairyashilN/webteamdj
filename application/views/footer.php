@@ -89,16 +89,16 @@
 		$('html, body').animate({scrollTop : 0},800);
 		return false;
 	});
-	$(window).scroll(function() {
-		if ($(document).scrollTop() > 50) {
-			$('.navbar-black').css('display','none');
-			$('.navbar-black-2').css('display','block');
-		} else {
-			// $('nav').removeClass('shrink');
-			$('.navbar-black').css('display','block');
-			$('.navbar-black-2').css('display','none');
-		}
-	});
+	// $(window).scroll(function() {
+	// 	if ($(document).scrollTop() > 50) {
+	// 		$('.navbar-black').css('display','none');
+	// 		$('.navbar-black-2').css('display','block');
+	// 	} else {
+	// 		// $('nav').removeClass('shrink');
+	// 		$('.navbar-black').css('display','block');
+	// 		$('.navbar-black-2').css('display','none');
+	// 	}
+	// });
 	$('.submit-contact').on('click',function(e) {
 		e.preventDefault();
 		if ($('#name,#phone,#email,#message').val() == '') {
